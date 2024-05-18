@@ -72,15 +72,36 @@ $_SESSION["information_user_id_sha1"] = $databaseHandler00->tableList_info[0];
 
 
 
+ 
+
+
+
+ 
+$directory = '../../../src/img/';
+
+if (!is_dir($directory)) {
+    if (mkdir($directory, 0777, true)) {
+        echo "Le dossier $directory a été créé avec succès.";
+    } else {
+        echo "Échec de la création du dossier $directory.";
+    }
+}  
+ 
+ 
+
 
 
 $dossier = "../../../src/img/".$_SESSION["information_user_id_sha1"] ; 
 
-// Créer le dossier
-if (!mkdir($dossier)) {
-    // Gérer les erreurs si la création du dossier échoue
-    echo 'Impossible de créer le dossier';
-} else {
-    echo 'Le dossier a été créé avec succès';
-}
+ 
+
+
+
+if (!is_dir($dossier)) {
+    if (mkdir($dossier, 0777, true)) {
+        echo "Le dossier $dossier a été créé avec succès.";
+    } else {
+        echo "Échec de la création du dossier $dossier.";
+    }
+}  
 ?>
