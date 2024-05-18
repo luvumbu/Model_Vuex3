@@ -38,13 +38,13 @@
 
 </textarea>
        
+      <img class="plus_element cursor_pointer" title="<?php echo $information_user_id_sha1 ?>" onclick="data_parent_plus(this)" width="50" height="50" src="https://img.icons8.com/color/50/add--v1.png" alt="add--v1"/>
        
        <?php
       if(isset($_SESSION["liste_projet_admin_insert"])){
         
     ?>
       <img class="plus_element cursor_pointer"  onclick="liste_projet_admin_insert_destroy()" width="50" height="50" src="https://img.icons8.com/ios-filled/50/save--v1.png" alt="save--v1"/>
-      <img class="plus_element cursor_pointer" title="<?php echo $information_user_id_sha1 ?>" onclick="data_parent_plus(this)" width="50" height="50" src="https://img.icons8.com/color/50/add--v1.png" alt="add--v1"/>
 
     <?php
 

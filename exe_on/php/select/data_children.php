@@ -51,7 +51,7 @@
 <textarea title="<?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" id="<?php  echo 'liste_projet_admin_name2_'.$liste_projet_admin_id_sha1_->tableList_info[$a] ?>" onkeyup="liste_projet_admin_key_up(this)" value="<?php echo "" ?>">
 <?php echo $_liste_projet_admin_name2 ?>
 </textarea>
-
+<img width="50"  onclick="remove_block(this)" title="<?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" class="remove_block cursor_pointer" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
     </div>
             <?php
       }
@@ -59,4 +59,14 @@
  
  
 
- 
+ ?>
+
+
+
+<style>
+      .remove_block{
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+      }
+</style>

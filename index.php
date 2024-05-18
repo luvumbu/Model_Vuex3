@@ -175,6 +175,24 @@ function xxx() {
 function myGreeting() {
   location.reload() ; 
 }
+ }
+
+ function remove_block(_this) {
+ 
+
+
+
+  var ok = new Information("exe_on/php/update/remove_block.php"); // création de la classe 
+  ok.add("liste_projet_admin_id_sha1", _this.title); // ajout de l'information pour lenvoi 
+  
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+
+  const myTimeout = setTimeout(myGreeting, 250);
+
+function myGreeting() {
+  location.reload() ; 
+}
 
 
 
