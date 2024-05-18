@@ -47,7 +47,7 @@ function disip()
 
 
 
-<div id="bg_black"></div>
+<div id="bg_black" onclick="bg_black()"></div>
 <style>
     .class1{
         display:none ; 
@@ -82,5 +82,12 @@ z-index: 1;
     }
 </style>
 <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+
+
+<script>
+    function bg_black() {
+        window.location.href = "../index.php";
+    }
+</script>
 </body>
 </html>
