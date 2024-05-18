@@ -109,9 +109,13 @@ $databaseHandler2->set_column_names("liste_projet_admin_name3");
 $databaseHandler2->set_column_names("liste_projet_admin_name4");
 $databaseHandler2->set_column_names("liste_projet_admin_name5");
 
-$databaseHandler2->set_column_names("liste_projet_admin_src1");
-$databaseHandler2->set_column_names("liste_projet_admin_src2");
-$databaseHandler2->set_column_names("liste_projet_admin_src3");
+
+
+$databaseHandler2->set_column_names("liste_projet_admin_img_name");
+$databaseHandler2->set_column_names("liste_projet_admin_img_extennsion");
+$databaseHandler2->set_column_names("liste_projet_admin_img_path");
+
+
 
 $databaseHandler2->set_column_names("liste_projet_admin_title_name1");
 $databaseHandler2->set_column_names("liste_projet_admin_title_name2");
