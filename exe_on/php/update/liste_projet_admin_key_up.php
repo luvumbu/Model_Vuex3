@@ -6,7 +6,7 @@ require_once '../../../class/DatabaseHandler.php';
 require_once '../../../class/config.php';
  
 
- $information_user_id_sha1 = $_SESSION["information_user_id_sha1"] ;
+$information_user_id_sha1 = $_POST["information_user_id_sha1"] ;
 $time = time() ;  
 $liste_projet_admin_name1 = $_POST["liste_projet_admin_name1"];   
 $liste_projet_admin_name2 = $_POST["liste_projet_admin_name2"] ; 

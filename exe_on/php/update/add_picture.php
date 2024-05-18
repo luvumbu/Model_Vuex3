@@ -4,12 +4,7 @@ header("Access-Control-Allow-Origin: *");
  
 require_once '../../../class/DatabaseHandler.php';
 require_once '../../../class/config.php';
- 
- 
-
-
-
-
+  
 
 $file_path = $_SESSION["file_path"] ; 
 $total = $_SESSION["total"] ; 

@@ -93,12 +93,14 @@ function liste_projet_admin_key_up(_this){
 
    
 
-console.log(liste_projet_admin_name1.value) ; 
-console.log(liste_projet_admin_name2.value) ; 
  
  
   var ok = new Information("exe_on/php/update/liste_projet_admin_key_up.php"); // création de la classe 
+  
+  ok.add("information_user_id_sha1", _this.title); // ajout de l'information pour lenvoi 
+  
   ok.add("liste_projet_admin_name1", liste_projet_admin_name1.value); // ajout de l'information pour lenvoi 
+
   ok.add("liste_projet_admin_name2", liste_projet_admin_name2.value); // ajout d'une deuxieme information denvoi  
   console.log(ok.info()); // demande l'information dans le tableau
   ok.push(); // envoie l'information au code pkp 
@@ -111,10 +113,6 @@ console.log(liste_projet_admin_name2.value) ;
 
  function add_picture(_this){
 
- 
-
- 
-
   var ok = new Information("exe_on/php/info/add_picture.php"); // création de la classe 
   ok.add("liste_projet_admin_id_sha1", _this.id); // ajout de l'information pour lenvoi 
   ok.add("id", _this.id); // ajout de l'information pour lenvoi 
@@ -123,6 +121,22 @@ console.log(liste_projet_admin_name2.value) ;
   console.log(ok.info()); // demande l'information dans le tableau
   ok.push(); // envoie l'information au code pkp 
  window.location.href = "add_picture/index.php";
+ }
+
+
+ function data_parent_plus(_this){
+  var ok = new Information("exe_on/php/insert/data_parent_plus.php"); // création de la classe 
+  //ok.add("liste_projet_admin_id_sha1", _this.id); // ajout de l'information pour lenvoi 
+  ok.add("id", _this.id); // ajout de l'information pour lenvoi 
+
+ 
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+
+
+
+
+  location.reload() ; 
  }
 </script>
 

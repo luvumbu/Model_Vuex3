@@ -89,6 +89,7 @@ $databaseHandler2->set_column_names("liste_projet_admin_id");
 $databaseHandler2->set_column_names("liste_projet_admin_ip");
 
 $databaseHandler2->set_column_names("liste_projet_admin_id_sha1");
+$databaseHandler2->set_column_names("liste_projet_admin_sha1_parent");
 $databaseHandler2->set_column_names("liste_projet_admin_id_sha1_user");
 $databaseHandler2->set_column_names("liste_projet_admin_information_user_login");
 
@@ -100,7 +101,7 @@ $databaseHandler2->set_column_names("liste_projet_admin_add_projet_value");
 
 
 $databaseHandler2->set_column_names("liste_projet_admin_sha1");
-$databaseHandler2->set_column_names("liste_projet_admin_sha1_parent");
+
 
 
 $databaseHandler2->set_column_names("liste_projet_admin_name1");
