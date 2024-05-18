@@ -112,7 +112,7 @@ function liste_projet_admin_key_up(_this){
  
 
  function add_picture(_this){
-
+ 
   var ok = new Information("exe_on/php/info/add_picture.php"); // création de la classe 
   ok.add("liste_projet_admin_id_sha1", _this.id); // ajout de l'information pour lenvoi 
   ok.add("id", _this.id); // ajout de l'information pour lenvoi 

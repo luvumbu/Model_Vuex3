@@ -31,7 +31,7 @@
 
       $_liste_projet_admin_name1 =  $liste_projet_admin_name1_->tableList_info[$a] ; 
       $_liste_projet_admin_name2 =  $liste_projet_admin_name2_->tableList_info[$a] ; 
-
+      $_liste_projet_admin_id_sha1_ = $liste_projet_admin_id_sha1_->tableList_info[$a] ; 
         
        
             
@@ -40,7 +40,7 @@
       <h2>            
             <input type="text" title="<?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" id="<?php  echo 'liste_projet_admin_name1_'.$liste_projet_admin_id_sha1_->tableList_info[$a] ?>" onkeyup="liste_projet_admin_key_up(this)" value="<?php echo $_liste_projet_admin_name1 ?>">
       </h2>
-      <div class="img_background_" id="<?php echo $img_background_ ?>" onclick="add_picture(this)" title="data_children">
+      <div class="img_background_" id="<?php echo $_liste_projet_admin_id_sha1_ ?>" onclick="add_picture(this)" title="data_children">
 
 
     
