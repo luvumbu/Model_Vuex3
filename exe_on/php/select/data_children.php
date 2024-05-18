@@ -51,7 +51,6 @@
 <textarea title="<?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" id="<?php  echo 'liste_projet_admin_name2_'.$liste_projet_admin_id_sha1_->tableList_info[$a] ?>" onkeyup="liste_projet_admin_key_up(this)" value="<?php echo "" ?>">
 <?php echo $_liste_projet_admin_name2 ?>
 </textarea>
-      <img class="plus_element cursor_pointer" onclick="data_parent_plus(this)" width="50" height="50" src="https://img.icons8.com/color/50/add--v1.png" alt="add--v1"/>
 
     </div>
             <?php

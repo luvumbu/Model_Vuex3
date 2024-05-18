@@ -128,15 +128,56 @@ function liste_projet_admin_key_up(_this){
   var ok = new Information("exe_on/php/insert/data_parent_plus.php"); // création de la classe 
   //ok.add("liste_projet_admin_id_sha1", _this.id); // ajout de l'information pour lenvoi 
   ok.add("id", _this.id); // ajout de l'information pour lenvoi 
+  ok.add("title", _this.title); // ajout de l'information pour lenvoi 
+
 
  
   console.log(ok.info()); // demande l'information dans le tableau
   ok.push(); // envoie l'information au code pkp 
 
+  const myTimeout = setTimeout(xw, 250);
 
-
-
+function xw() {
   location.reload() ; 
+
+}
+
+
+ }
+
+ function liste_projet_admin_insert(){
+
+  
+
+  var ok = new Information("exe_on/php/insert/liste_projet_admin_insert.php"); // création de la classe 
+  //ok.add("liste_projet_admin_id_sha1", _this.id); // ajout de l'information pour lenvoi 
+  //ok.add("id", _this.id); // ajout de l'information pour lenvoi 
+
+ 
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+
+  const myTimeout = setTimeout(xxx, 250);
+
+function xxx() {
+  location.reload() ; 
+}
+
+ }
+
+
+ function liste_projet_admin_insert_destroy(){
+  Ajax("destroy","class/liste_projet_admin_insert_destroy.php");
+
+
+  const myTimeout = setTimeout(myGreeting, 250);
+
+function myGreeting() {
+  location.reload() ; 
+}
+
+
+
  }
 </script>
 

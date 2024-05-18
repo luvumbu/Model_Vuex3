@@ -24,8 +24,21 @@ exe_on/php/select/log_data:
     <h2>Blog Name</h2>
   </div>
   <div>
-    <img onclick="destroy()" width="50" height="50" src="https://img.icons8.com/fluency-systems-regular/50/shutdown.png" alt="shutdown" />
+    <img onclick="destroy()" class="cursor_pointer" width="50" height="50" src="https://img.icons8.com/fluency-systems-regular/50/shutdown.png" alt="shutdown" />
+    <img onclick="liste_projet_admin_insert()" width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/ios-filled/50/add--v1.png" alt="add--v1"/>
   </div>
+
+
+  <?php 
+          if(isset($_SESSION["liste_projet_admin_insert"])){
+        
+            $information_user_id_sha1 = $_SESSION['liste_projet_admin_insert'] ; 
+
+
+            echo     $information_user_id_sha1 ; 
+          } 
+
+  ?>
   <div class="row row_element">
     <div class="leftcolumn">
         <?php

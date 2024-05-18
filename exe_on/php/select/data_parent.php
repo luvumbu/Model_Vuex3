@@ -1,9 +1,24 @@
 <?php
       $databaseHandler01 = new DatabaseHandler($username ,$password);     
-      $databaseHandler01->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`="'.$information_user_id_sha1.'" AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'"',"liste_projet_admin_name1");
-      $databaseHandler01->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`="'.$information_user_id_sha1.'" AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'"',"liste_projet_admin_name2");
-      $databaseHandler01->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`="'.$information_user_id_sha1.'" AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'"',"liste_projet_admin_img_path");
-      $databaseHandler01->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`="'.$information_user_id_sha1.'" AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'"',"liste_projet_admin_id_sha1");
+
+
+      if(isset($_SESSION["liste_projet_admin_insert"])){
+        
+        $information_user_id_sha1 = $_SESSION['liste_projet_admin_insert'] ; 
+
+
+     $list_sql ='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`="'.$information_user_id_sha1.'"'; 
+      } 
+      else {
+        $list_sql ='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`="'.$information_user_id_sha1.'"  AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'"'; 
+   
+      }
+      $databaseHandler01->getDataFromTable($list_sql,"liste_projet_admin_name1");
+      $databaseHandler01->getDataFromTable($list_sql,"liste_projet_admin_name2");
+      $databaseHandler01->getDataFromTable($list_sql,"liste_projet_admin_img_path");
+      $databaseHandler01->getDataFromTable($list_sql,"liste_projet_admin_id_sha1");
+      
+ 
       $liste_projet_admin_name1_data = $databaseHandler01->tableList_info[0] ;
       $liste_projet_admin_name2_data = $databaseHandler01->tableList_info[1] ;    
       $xx =str_replace("../","",$databaseHandler01->tableList_info[2]);  
@@ -22,8 +37,22 @@
 <?php echo $liste_projet_admin_name2_data ?>
 
 </textarea>
-      <img class="plus_element cursor_pointer" onclick="data_parent_plus(this)" width="50" height="50" src="https://img.icons8.com/color/50/add--v1.png" alt="add--v1"/>
+       
+       
+       <?php
+      if(isset($_SESSION["liste_projet_admin_insert"])){
+        
+    ?>
+      <img class="plus_element cursor_pointer"  onclick="liste_projet_admin_insert_destroy()" width="50" height="50" src="https://img.icons8.com/ios-filled/50/save--v1.png" alt="save--v1"/>
+      <img class="plus_element cursor_pointer" title="<?php echo $information_user_id_sha1 ?>" onclick="data_parent_plus(this)" width="50" height="50" src="https://img.icons8.com/color/50/add--v1.png" alt="add--v1"/>
 
+    <?php
+
+ 
+      } 
+ 
+
+?>
     </div>
 
 
