@@ -1,5 +1,8 @@
 <?php 
 session_start() ; 
+
+
+//$_SESSION['liste_projet_admin_insert'] ="1716104659";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -199,7 +202,20 @@ function myGreeting() {
  }
 
  function all_liste_projet_admin() {
-  console.log("yes") ; 
+ 
+
+  
+  var ok = new Information("class/all_liste_projet_admin.php"); // création de la classe 
+  //ok.add("liste_projet_admin_id_sha1", _this.title); // ajout de l'information pour lenvoi 
+  
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+
+ }
+
+
+ function data_all_remove(_this){
+  console.log(_this.title) ; 
  }
 </script>
 

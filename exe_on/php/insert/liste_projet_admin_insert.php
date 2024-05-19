@@ -17,6 +17,10 @@ $databaseHandler00->action_sql("INSERT INTO `liste_projet_admin` (liste_projet_a
 
 
 $_SESSION['liste_projet_admin_insert'] = $liste_projet_admin_id_sha1 ; 
+
+
+
+ 
  
 ?>
 
