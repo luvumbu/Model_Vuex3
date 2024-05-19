@@ -10,7 +10,7 @@
      $list_sql ='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`="'.$information_user_id_sha1.'"'; 
       } 
       else {
-        $list_sql ='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`="'.$information_user_id_sha1.'"  AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'"'; 
+        $list_sql ='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`="'.$information_user_id_sha1.'"  AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" '; 
    
       }
       $databaseHandler01->getDataFromTable($list_sql,"liste_projet_admin_name1");
@@ -23,12 +23,19 @@
       $liste_projet_admin_name2_data = $databaseHandler01->tableList_info[1] ;    
       $xx =str_replace("../","",$databaseHandler01->tableList_info[2]);  
       $img_background_ =$databaseHandler01->tableList_info[3] ;
+
+      echo  $xx; 
 ?>
 <div class="card">
       <h2>            
             <input type="text" title="<?php echo $information_user_id_sha1 ?>" id="<?php  echo 'liste_projet_admin_name1_'.$information_user_id_sha1 ?>" onkeyup="liste_projet_admin_key_up(this)" value="<?php echo $liste_projet_admin_name1_data ?>">
       </h2>
-      <div class="img_background_" id="<?php echo $img_background_ ?>" onclick="add_picture(this)" title="data_parent">
+
+      <?php 
+
+      echo $img_background_ ; 
+      ?> 
+           <div class="img_background_" id="<?php echo $img_background_ ?>" onclick="add_picture(this)" title="data_parent">
                   <img src="<?php echo $xx ?>" alt="" srcset="">
       </div>
       <!-- <h5>Title description, Sep 2, 2017</h5> -->

@@ -12,7 +12,7 @@
       $liste_projet_admin_img_path_ =new DatabaseHandler($username ,$password); 
 
 
-      $info_sql ='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1_user`="'.$information_user_id_sha1.'"   ' ; 
+      $info_sql ='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1_user`="'.$information_user_id_sha1.'" AND `liste_projet_admin_sha1_parent` =""  ' ; 
       
       
       $liste_projet_admin_id_->getDataFromTable($info_sql,"liste_projet_admin_id");
@@ -37,6 +37,11 @@
         <div>
           <?php  echo $liste_projet_admin_name1__.'...' ?>
         </div>   
+        <div>
+          <?php
+          echo $a ;
+          ?>
+        </div>
         <br/>
         <?php
         if($liste_projet_admin_id_sha1__!=$information_user_id_sha1){
