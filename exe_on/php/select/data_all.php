@@ -25,38 +25,21 @@
 
 
       for($a = 0 ; $a <count($liste_projet_admin_id_sha1_->tableList_info); $a ++) {
-
-
         $liste_projet_admin_id_sha1__=  $liste_projet_admin_id_sha1_->tableList_info[$a] ; 
-        $liste_projet_admin_name1__=  $liste_projet_admin_name1_->tableList_info[$a] ; 
-
-
-
-      
-
-       
-        $max_length = 10;
-        
+        $liste_projet_admin_name1__=  $liste_projet_admin_name1_->tableList_info[$a] ;   
+        $max_length = 10;        
         // Utilisation de substr pour obtenir les 5 premiers caractères
-       $liste_projet_admin_name1__= substr($liste_projet_admin_name1__, 0, $max_length);
-        
-   
+       $liste_projet_admin_name1__= substr($liste_projet_admin_name1__, 0, $max_length);         
 
         ?>
       <div class="fakeimg cursor_pointer">
         <div>
-          <?php  echo   $liste_projet_admin_id_sha1__  ?>
-          
+          <?php  echo   $liste_projet_admin_id_sha1__  ?>          
         </div>
         <div>
           <?php  echo $liste_projet_admin_name1__.'...' ?>
-        </div>
-   
+        </div>   
         <br/>
-
- 
-
-
         <?php
         if($liste_projet_admin_id_sha1__!=$information_user_id_sha1){
 ?>
@@ -69,7 +52,7 @@
         }
         ?>
         <div>
-        <img class="img_colors" width="50" height="50" src="https://img.icons8.com/ios/50/preview-pane.png" alt="preview-pane"/>
+        <img onclick="liste_projet_admin_insert(this)" title="<?php echo  $liste_projet_admin_id_sha1__ ?>" class="img_colors" width="50" height="50" src="https://img.icons8.com/ios/50/preview-pane.png" alt="preview-pane"/>
         </div>
       </div> 
         <?php

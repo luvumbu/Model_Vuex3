@@ -148,13 +148,16 @@ function xw() {
 
  }
 
- function liste_projet_admin_insert(){
+ function liste_projet_admin_insert(_this){
 
-  
+ 
 
   var ok = new Information("exe_on/php/insert/liste_projet_admin_insert.php"); // création de la classe 
   //ok.add("liste_projet_admin_id_sha1", _this.id); // ajout de l'information pour lenvoi 
-  //ok.add("id", _this.id); // ajout de l'information pour lenvoi 
+  
+  
+  
+ ok.add("liste_projet_admin_insert", _this.title); // ajout de l'information pour lenvoi 
 
  
   console.log(ok.info()); // demande l'information dans le tableau
