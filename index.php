@@ -197,6 +197,10 @@ function myGreeting() {
 
 
  }
+
+ function all_liste_projet_admin() {
+  console.log("yes") ; 
+ }
 </script>
 
 <style>

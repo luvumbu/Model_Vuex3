@@ -34,8 +34,7 @@
       <!-- <h5>Title description, Sep 2, 2017</h5> -->
        
 <textarea title="<?php echo $information_user_id_sha1 ?>" id="<?php  echo 'liste_projet_admin_name2_'.$information_user_id_sha1 ?>" onkeyup="liste_projet_admin_key_up(this)" value="<?php echo $liste_projet_admin_name2_data ?>">
-<?php echo $liste_projet_admin_name2_data ?>
-
+<?php echo   $liste_projet_admin_name2_data ?>
 </textarea>
        
       <img class="plus_element cursor_pointer" title="<?php echo $information_user_id_sha1 ?>" onclick="data_parent_plus(this)" width="50" height="50" src="https://img.icons8.com/color/50/add--v1.png" alt="add--v1"/>
@@ -46,6 +45,13 @@
     ?>
       <img class="plus_element cursor_pointer"  onclick="liste_projet_admin_insert_destroy()" width="50" height="50" src="https://img.icons8.com/ios-filled/50/save--v1.png" alt="save--v1"/>
 
+
+   
+<style>
+  #add_projet {
+    display: none;
+  }
+</style>
     <?php
 
  
@@ -86,5 +92,6 @@
         }
         textarea{
             width: 100%;
+            height: 200px;
         }
     </style>

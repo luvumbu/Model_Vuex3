@@ -77,7 +77,12 @@ if( $_SERVER['SERVER_NAME']=="localhost"){
 ?>
 <script>
   document.getElementById("form_forgot_password_id").className="display_none" ; 
+ 
+
+  
 </script>
+
+
 <?php 
 }
  
