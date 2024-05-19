@@ -33,9 +33,7 @@
 
         ?>
       <div class="fakeimg cursor_pointer">
-        <div>
-          <?php  echo   $liste_projet_admin_id_sha1__  ?>          
-        </div>
+ 
         <div>
           <?php  echo $liste_projet_admin_name1__.'...' ?>
         </div>   
@@ -44,10 +42,16 @@
         if($liste_projet_admin_id_sha1__!=$information_user_id_sha1){
 ?>
 
-<div title="<?php echo $liste_projet_admin_id_sha1__ ?>" onclick="remove_block(this)">
  
- <img class="img_colors" width="50" height="50" src="https://img.icons8.com/fluency/50/delete-forever.png" alt="delete-forever"/>
- </div>
+<img class="img_colors" title="<?php echo $liste_projet_admin_id_sha1__ ?>" onclick="remove_block_(this)"  width="50" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
+
+  <div class="display_none" id="<?php echo "remove_".$liste_projet_admin_id_sha1__ ?>" title="<?php echo $liste_projet_admin_id_sha1__ ?>" onclick="remove_block(this)">
+  
+  <img class="img_colors" width="50" height="50" src="https://img.icons8.com/fluency/50/delete-forever.png" alt="delete-forever"/>
+  </div>
+
+
+
 <?php 
         }
         ?>
@@ -79,5 +83,8 @@
   .max_height{
     max-height: 500px; 
     overflow-y: scroll; /* Hide vertical scrollbar */
+  }
+  .display_none{
+    display: none;
   }
 </style>

@@ -220,6 +220,16 @@ function myGreeting() {
  function data_all_remove(_this){
   console.log(_this.title) ; 
  }
+
+ function remove_block_(_this){
+  console.log(_this.title) ; 
+  document.getElementById("remove_"+_this.title).className="" ; 
+
+_this.style.display="none" ; 
+
+
+
+ }
 </script>
 
 <style>
