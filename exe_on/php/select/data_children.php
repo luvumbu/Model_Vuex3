@@ -6,8 +6,10 @@
       $liste_projet_admin_name2_ = new DatabaseHandler($username ,$password); 
       $liste_projet_admin_img_path_ =new DatabaseHandler($username ,$password); 
 
+      $liste_projet_admin_id_sha1 = $_SESSION['liste_projet_admin_insert'] ; 
 
-      $info_sql ='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_sha1_parent`="'.$information_user_id_sha1.'" ' ; 
+      
+      $info_sql ='SELECT * FROM `liste_projet_admin` WHERE  `liste_projet_admin_sha1_parent` ="'.$liste_projet_admin_id_sha1.'" ORDER BY  `liste_projet_admin_id` ASC ' ; 
       
       
       $liste_projet_admin_id_->getDataFromTable($info_sql,"liste_projet_admin_id");
@@ -70,3 +72,54 @@
 
       }
 </style>
+
+ 
+ 
+
+
+  
+<style>
+  #add_projet {
+    display: none;
+  }
+</style>
+  
+
+ 
+ 
+  
+
+
+
+ 
+<style>
+    .plus_element{
+        margin-top: 100px;
+    }
+        .img_background_ {
+            margin-top: 50px; 
+            margin-bottom: 50px; 
+            min-width: 600px;
+            min-height: 600px;
+            border: 1px solid rgba(0,0,0,0.2);
+            position: relative;
+            height: 600px;
+            overflow: hidden; /* Empêche l'image de dépasser la hauteur de la div */
+        }
+
+        .img_background_ img:hover {
+            cursor: pointer;
+        }
+
+        .img_background_ img {
+            max-height: 100%; /* Limite la hauteur de l'image à la hauteur de la div */
+            width: auto; /* Maintient le ratio d'aspect de l'image */
+            display: block; /* Évite les espaces indésirables sous l'image */
+            margin: auto; /* Centre l'image horizontalement si elle est plus petite */
+            position: relative;
+        }
+        textarea{
+            width: 100%;
+            height: 200px;
+        }
+    </style>

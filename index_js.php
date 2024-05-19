@@ -68,7 +68,7 @@ function liste_projet_admin_key_up(_this){
   ok.add("id", _this.id); // ajout de l'information pour lenvoi 
   ok.add("title", _this.title); // ajout de l'information pour lenvoi 
 
-
+ 
  
   console.log(ok.info()); // demande l'information dans le tableau
   ok.push(); // envoie l'information au code pkp 
@@ -84,7 +84,7 @@ function xw() {
  }
 
  function liste_projet_admin_insert(_this){
-
+ 
  _this.style.display="none" ; 
 
   var ok = new Information("exe_on/php/insert/liste_projet_admin_insert.php"); // création de la classe 
@@ -108,6 +108,10 @@ function xxx() {
 
 
  function liste_projet_admin_insert_destroy(){
+
+
+
+ 
   Ajax("destroy","class/liste_projet_admin_insert_destroy.php");
 
 
