@@ -34,14 +34,14 @@ require_once $fichier_connexion;
 $databaseHandler = new DatabaseHandler($username, $password); 
 if(!$databaseHandler->verif) {   
     unlink($fichier_connexion) ;     
-    echo $reload_page  ;
+ //   echo $reload_page  ;
 } 
 
 if( $databaseHandler->existance_table("information_user")==0){
   // verification de l'existance de la table information_user
   // si la table n'existe pas on efface le fichier configuration et on recharge la page
   unlink($fichier_connexion) ;     
-  echo $reload_page  ;
+ // echo $reload_page  ;
 }
     
      if(isset($_SESSION["information_user_id_sha1"])){     
