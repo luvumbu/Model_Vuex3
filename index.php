@@ -69,8 +69,17 @@ else {
   require_once 'index_js.php' ; 
   require_once 'index_css.php' ; 
 
+  require_once 'class/Get_anne.php' ; 
 
 
+  require_once 'exe_on/php/select/presentation.php' ; 
+
+
+
+
+
+
+  
 ?>
 
 

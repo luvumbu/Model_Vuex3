@@ -73,3 +73,11 @@ exe_on/php/select/log_data:
 </body>
 
 </html>
+
+<style>
+ 
+  .row_element{
+    width: 98%;
+    margin: auto;
+  }
+</style>
