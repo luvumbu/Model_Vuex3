@@ -61,7 +61,7 @@
         }
         ?>
         <div>
-        <img onclick="liste_projet_admin_insert(this)" title="<?php echo  $liste_projet_admin_id_sha1__ ?>" class="img_colors" width="50" height="50" src="https://img.icons8.com/ios/50/preview-pane.png" alt="preview-pane"/>
+        <img onclick="data_all_cookie(this)" title="<?php echo  $liste_projet_admin_id_sha1__ ?>" class="img_colors" width="50" height="50" src="https://img.icons8.com/ios/50/preview-pane.png" alt="preview-pane"/>
         </div>
       </div> 
         <?php

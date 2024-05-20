@@ -8,8 +8,16 @@
 
       $liste_projet_admin_id_sha1 = $_SESSION['liste_projet_admin_insert'] ; 
 
+
+      if(isset($_SESSION['liste_projet_admin_insert'])){
+            $liste_projet_admin_id_sha1 = $_SESSION["liste_projet_admin_insert"] ; 
+            
+          }
+          else {
+            $liste_projet_admin_id_sha1 = $_SESSION["information_user_id_sha1"] ; 
+          }
       
-      $info_sql ='SELECT * FROM `liste_projet_admin` WHERE  `liste_projet_admin_sha1_parent` ="'.$liste_projet_admin_id_sha1.'" ORDER BY  `liste_projet_admin_id` ASC ' ; 
+      $info_sql ='SELECT * FROM `liste_projet_admin` WHERE  `liste_projet_admin_sha1_parent` ="'.$liste_projet_admin_id_sha1.'" ORDER BY  `liste_projet_admin_id_sha1` ASC ' ; 
       
       
       $liste_projet_admin_id_->getDataFromTable($info_sql,"liste_projet_admin_id");

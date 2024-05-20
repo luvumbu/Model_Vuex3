@@ -36,10 +36,14 @@ exe_on/php/select/log_data:
 
         if(isset($_SESSION['liste_projet_admin_insert'])){
           $liste_projet_admin_id_sha1 = $_SESSION["liste_projet_admin_insert"] ; 
-          
+          echo "======================1  : ".$liste_projet_admin_id_sha1;
         }
         else {
+      
           $liste_projet_admin_id_sha1 = $_SESSION["information_user_id_sha1"] ; 
+
+          echo "======================2  : ".$liste_projet_admin_id_sha1;
+
         }
             require_once "exe_on/php/select/data_parent.php";
             require_once "exe_on/php/select/data_children.php";

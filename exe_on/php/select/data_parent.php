@@ -7,7 +7,7 @@
       $liste_projet_admin_img_path_ =new DatabaseHandler($username ,$password); 
 
 
-      $info_sql ='SELECT * FROM `liste_projet_admin` WHERE  `liste_projet_admin_id_sha1` ="'.$liste_projet_admin_id_sha1.'" ORDER BY  `liste_projet_admin_id` ASC ' ; 
+      $info_sql ='SELECT * FROM `liste_projet_admin` WHERE  `liste_projet_admin_id_sha1` ="'.$liste_projet_admin_id_sha1.'" ORDER BY  `liste_projet_admin_id_sha1` ASC ' ; 
       
       
       $liste_projet_admin_id_->getDataFromTable($info_sql,"liste_projet_admin_id");
