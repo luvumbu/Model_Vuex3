@@ -59,7 +59,7 @@ exe_on/php/select/log_data:
       $plus_element__t = 0 ; 
           require_once "exe_on/php/select/data_parent.php";
           $plus_element__t = 1 ; 
-       //   require_once "exe_on/php/select/data_children.php";
+       require_once "exe_on/php/select/data_children.php";
       ?>
     </div>
     <div class="rightcolumn" id="rightcolumn">

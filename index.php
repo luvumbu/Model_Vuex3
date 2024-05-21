@@ -78,12 +78,16 @@ else {
 
   require_once 'class/Get_anne.php' ; 
 
-echo ' <div class="presentation">' ; 
-  require_once 'exe_on/php/select/presentation.php' ; 
-  echo ' </div' ; 
+  require 'exe_on/php/select/log_css.php' ; 
 
 
 
+
+
+
+  if(!isset($_SESSION["information_user_id_sha1"])){     
+      require_once 'exe_on/php/select/presentation.php' ; 
+  }
 
 
   

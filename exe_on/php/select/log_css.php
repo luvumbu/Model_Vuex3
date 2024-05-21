@@ -39,5 +39,11 @@
         textarea{
             width: 100%;
             height: 200px;
+            color: black;
+        }
+        .card h1 {
+     
+            text-align: center;
+        
         }
     </style>
