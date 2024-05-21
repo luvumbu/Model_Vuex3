@@ -1,5 +1,8 @@
-
+ 
 <?php
+
+
+$information_user_id_sha1 = $liste_projet_admin_id_sha1__ ; 
 $databaseHandler01 = new DatabaseHandler($username ,$password);
 $databaseHandler01->getDataFromTable('SELECT * FROM `information_user` WHERE `information_user_id_sha1`="'.$information_user_id_sha1.'" ',"information_user_name_1");
 $databaseHandler02 = new DatabaseHandler($username ,$password);
@@ -10,7 +13,7 @@ $array_information_user_name_1 = $databaseHandler01->tableList_info[0] ;
 $array_information_user_name_2 = $databaseHandler02->tableList_info[0] ; 
 $information_user_img_path =str_replace("../","",$databaseHandler03->tableList_info[0]);
 
-
+ 
  
 $file = $information_user_img_path;
 $time="";
@@ -26,7 +29,7 @@ if (file_exists($file)) {
 ?>
 <div class="card">
       <h2>
-        <input onkeyup="information_user_key_up()" id="information_user_name_1" type="text" value="<?php echo  $array_information_user_name_1 ?>" placeholder="Votre nom" >       
+      <?php echo  $array_information_user_name_1 ?>
       </h2>
       <div id="data_user_img" onclick="add_picture(this)" title="data_user">
             
@@ -45,36 +48,8 @@ echo '<img id="src_src" src="'.$information_user_img_path.'" alt=""></br>';
             ?>
       </div>
 
-<?php 
-
-echo '<div class="remove_img" onclick="array_remove_img(this)">
-<img width="50" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
-</div>';
-
-      echo ' <div id="array_remove_img" class="display_none">
-      <div onclick="array_remove_img_choise(this)" title="yes">
-          <img width="50" height="50" src="https://img.icons8.com/glyph-neue/50/FA5252/delete-forever.png" alt="delete-forever"/>
-          <br/>
-          <p>
-          Confirmer
-          </p>
-      </div>
-      <div>
-       <img onclick="array_remove_img_choise(this)" title="not" width="49" height="49" src="https://img.icons8.com/ios-filled/49/40C057/cancel-2.png" alt="cancel-2"/>
-       <br/>
-       <p>
-       annuler
-       </p>
-       
-      </div>
-     
-      </div>
-      '
-      ?>
-      <p>
-      <textarea onkeyup="information_user_key_up()" id="information_user_name_2" placeholder="Déscription"> <?php echo  $array_information_user_name_2 ?>
-      </textarea>  
-    
+ 
+      <p><?php echo  $array_information_user_name_2 ?></p>
 </div>
 
 
