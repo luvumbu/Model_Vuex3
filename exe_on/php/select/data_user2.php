@@ -31,7 +31,7 @@ if (file_exists($file)) {
       <h2>
       <?php echo  $array_information_user_name_1 ?>
       </h2>
-      <div id="data_user_img" onclick="add_picture(this)" title="data_user">
+      <div id="data_user_img"  title="data_user">
             
 
             <?php 
@@ -64,7 +64,7 @@ echo '<img id="src_src" src="'.$information_user_img_path.'" alt=""></br>';
     margin-bottom: 50px;
   }
   #data_user_img:hover{
-    cursor: pointer;
+   
   }
   #data_user_img img {
     max-width: 260px;

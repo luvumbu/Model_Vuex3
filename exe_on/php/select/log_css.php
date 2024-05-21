@@ -14,11 +14,11 @@
         .img_background_ {
             margin-top: 50px; 
             margin-bottom: 50px; 
-            min-width: 600px;
-            min-height: 600px;
+            max-width: 100%;
+            max-height: 100%;
             border: 1px solid rgba(0,0,0,0.2);
             position: relative;
-            height: 600px;
+            height: 100%;
             overflow: hidden; /* Empêche l'image de dépasser la hauteur de la div */
             background-color: black; 
 

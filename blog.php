@@ -84,7 +84,10 @@ else {
 ?>
 
 
- 
+<a href="../index.php">
+        <h3><img width="50" height="50" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1"/></h3>
+      </a>
+      
 
 
 

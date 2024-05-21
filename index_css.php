@@ -7,4 +7,7 @@
   .cursor_pointer:hover {
     cursor: pointer;
   }
+  .card h2 {
+    text-align: center;
+  }
 </style>

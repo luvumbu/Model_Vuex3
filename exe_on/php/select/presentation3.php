@@ -22,9 +22,7 @@ $liste_projet_admin_img_path_ = new DatabaseHandler($username, $password);
 ?>
 <body>
 
-<div class="header">
-  <h2>Blog Name</h2>
-</div>
+ 
 
 <div class="row">
   <div class="leftcolumn">
@@ -56,17 +54,20 @@ require 'model_new_data3_1.php' ;
 ?>
  
     <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
+      <a href="../index.php">
+        <h3><img width="50" height="50" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1"/></h3>
+      </a>
+      
+     
     </div>
   </div>
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+  <h2></h2>
 </div>
 
 </body>
 
 
-?>
+ 

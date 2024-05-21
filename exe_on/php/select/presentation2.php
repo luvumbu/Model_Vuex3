@@ -22,9 +22,7 @@ $liste_projet_admin_img_path_ = new DatabaseHandler($username, $password);
 ?>
 <body>
 
-<div class="header">
-  <h2>Blog Name</h2>
-</div>
+ 
 
 <div class="row">
   <div class="leftcolumn">
@@ -62,10 +60,10 @@ require 'model_new_data3.php' ;
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+  <h2></h2>
 </div>
 
 </body>
 
 
-?>
+ 
