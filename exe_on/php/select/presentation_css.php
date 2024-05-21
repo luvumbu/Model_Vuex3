@@ -20,6 +20,8 @@
             position: relative;
             height: 600px;
             overflow: hidden; /* Empêche l'image de dépasser la hauteur de la div */
+            background-color: black; 
+
         }
 
         .img_background_ img:hover {
@@ -32,6 +34,7 @@
             display: block; /* Évite les espaces indésirables sous l'image */
             margin: auto; /* Centre l'image horizontalement si elle est plus petite */
             position: relative;
+            background-color: black; 
         }
         textarea{
             width: 100%;

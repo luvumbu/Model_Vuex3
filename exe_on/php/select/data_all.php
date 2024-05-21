@@ -4,7 +4,9 @@
      
 
 <?php
-      $liste_projet_admin_id_ = new DatabaseHandler($username ,$password);   
+ 
+ 
+     $liste_projet_admin_id_ = new DatabaseHandler($username ,$password);   
       $liste_projet_admin_id_sha1_ = new DatabaseHandler($username ,$password);     
       $liste_projet_admin_id_sha1_user_ = new DatabaseHandler($username ,$password);     
       $liste_projet_admin_name1_ = new DatabaseHandler($username ,$password);     

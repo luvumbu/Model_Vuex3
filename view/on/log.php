@@ -55,8 +55,11 @@ exe_on/php/select/log_data:
         $liste_projet_admin_insert_bool = "1";
  
       }
-      require_once "exe_on/php/select/data_parent.php";
-      require_once "exe_on/php/select/data_children.php";
+
+      $plus_element__t = 0 ; 
+          require_once "exe_on/php/select/data_parent.php";
+          $plus_element__t = 1 ; 
+       //   require_once "exe_on/php/select/data_children.php";
       ?>
     </div>
     <div class="rightcolumn" id="rightcolumn">

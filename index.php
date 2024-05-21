@@ -46,6 +46,13 @@ if( $databaseHandler->existance_table("information_user")==0){
     
      if(isset($_SESSION["information_user_id_sha1"])){     
       require_once $log; 
+      ?>
+<style>
+  .presentation{
+    display: none;
+  }
+</style>
+      <?php 
     } 
     else{
       require_once $form_log_dbd_user_on; 
@@ -71,9 +78,9 @@ else {
 
   require_once 'class/Get_anne.php' ; 
 
-
+echo ' <div class="presentation">' ; 
   require_once 'exe_on/php/select/presentation.php' ; 
-
+  echo ' </div' ; 
 
 
 
@@ -84,6 +91,8 @@ else {
 
 
  
+
+
 
  
 
