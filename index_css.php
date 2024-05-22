@@ -36,6 +36,10 @@ h3 {
 #data_all_colors{
   background-color:#584e80;
 }
+.information_user_reg_date_{
+  color: rgba(0,0,0,0.4);
+  margin-bottom: 60px;
+}
 </style>
 </style>
  

@@ -7,6 +7,9 @@ $liste_projet_admin_name1_->getDataFromTable($info_sql, "liste_projet_admin_name
 $liste_projet_admin_name2_->getDataFromTable($info_sql, "liste_projet_admin_name2");
 $liste_projet_admin_img_path_->getDataFromTable($info_sql, "liste_projet_admin_img_path");
 
+$information_user_reg_date_->getDataFromTable($info_sql, "information_user_reg_date");
+
+
 
 
 ?>

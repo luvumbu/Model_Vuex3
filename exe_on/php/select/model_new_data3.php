@@ -8,9 +8,18 @@ for ($a = 0; $a < count($liste_projet_admin_id_sha1_->tableList_info); $a++) {
     $_liste_projet_admin_name1 =  $liste_projet_admin_name1_->tableList_info[$a];
     $_liste_projet_admin_name2 =  $liste_projet_admin_name2_->tableList_info[$a];
     $_liste_projet_admin_id_sha1_ = $liste_projet_admin_id_sha1_->tableList_info[$a];
+    $_information_user_reg_date_ = $information_user_reg_date_>$tableList_info[$a];
+
+ 
+ 
+  $information_user_reg_date__ = new Get_anne($information_user_reg_date_->tableList_info[$a] );
+
+  $_information_user_reg_date__="Posté le : ".$information_user_reg_date__->get_jour().'/'.$information_user_reg_date__->get_mois().'/'.$information_user_reg_date__->get_anne() ; 
+    
+  $_information_user_reg_date__ =   $_information_user_reg_date__." a ". $information_user_reg_date__->get_heure_complet() ;
  
 
-    
+
 ?>
     <div class="card">
           <h2>
@@ -24,20 +33,37 @@ if($liste_projet_admin_insert_bool=="1"){
 else{
 echo  "<h3>".$_liste_projet_admin_name1."<h3>" ;
 }
-            ?>
-          </h2>
 
+
+ 
+
+            ?>
+
+           
+          </h2>
+ 
           <?php 
+ 
 
 if($liste_projet_admin_insert_bool=="1"){
 
     $onclick ="add_picture(this)";
 }
     ?>
-
+ 
 <div class="img_background_" id="<?php echo $_liste_projet_admin_id_sha1_ ?>" onclick="<?php echo  $onclick ?>" title="data_children">
                 <img src="<?php echo  $img_src ?>" alt="" srcset="">
-          </div>
+</div>
+<div class="information_user_reg_date_">
+    <?php 
+    echo   $_information_user_reg_date__ ; 
+
+    if($liste_projet_admin_insert_bool=="1"){
+
+        $onclick ="add_picture(this)";
+    }
+        ?>
+</div>
 <?php 
  
 
