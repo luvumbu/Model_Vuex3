@@ -1,59 +1,97 @@
-<div class="card text-center max_height" id="data_popular">
+<div class="card">
+ <?php 
+$liste_projet_admin_id_sha1_user_ = new DatabaseHandler($username, $password);
+
+ if(give_url()!="index.php"){
+  $info_sql = 'SELECT * FROM `liste_projet_admin`  WHERE `liste_projet_admin_id_sha1`="'.give_url().'" ORDER BY   `liste_projet_admin_id_sha1` ASC';
+
+ }
+ else {
+
+  if(isset($_SESSION["information_user_id_sha1"])){
  
+    $info_sql = 'SELECT * FROM `liste_projet_admin`  WHERE `liste_projet_admin_id_sha1`='.$_SESSION["information_user_id_sha1"].'';
+  }
+  else {
+    $info_sql = 'SELECT * FROM `liste_projet_admin`  WHERE `liste_projet_admin_id`="1" ';
 
-<?php
- 
- 
-     $information_user_name_1 = new DatabaseHandler($username ,$password);   
-      $information_user_name_2 = new DatabaseHandler($username ,$password);     
-      $information_user_img_path = new DatabaseHandler($username ,$password);     
- 
+  }
+  
 
-      $info_sql ='SELECT * FROM `information_user` WHERE 1 LIMIT 1 ' ; 
-      
-      
-      $information_user_name_1->getDataFromTable($info_sql,"information_user_name_1");
-      $information_user_name_2->getDataFromTable($info_sql,"information_user_name_2");
-      $information_user_img_path->getDataFromTable($info_sql,"information_user_img_path");
- 
-      
-      $information_user_img_path_ =    str_replace("../","", $information_user_img_path->tableList_info[0]) ; 
+ }
 
-   
-      
-      
- ?>
- <div class="information_user_name_1">
-  <h1>
-      <?php  echo $information_user_name_1->tableList_info[0] ?>
-  </h1>
+$liste_projet_admin_id_sha1_user_ ->getDataFromTable($info_sql, "liste_projet_admin_id_sha1_user");
 
- </div>
 
- <div class="information_user_img_path">  
-  <img src="<?php echo $information_user_img_path_ ?>" alt="" srcset="">
- </div>
- <div class="information_user_name_2">
-
-  <h3>
-      <?php  echo $information_user_name_2->tableList_info[0] ?>
-  </h3>
- </div>
 
  
-
-</div>
-<style>
-.information_user_img_path img {
-  width: 200px;
-}
-.information_user_name_2{
-  text-align: justify;
-  margin-top: 50px;
-}
-.information_user_name_1{
-  margin-bottom: 50px;
+ 
+  
+  
  
 
-}
-</style>
+
+
+  if(isset($_SESSION["information_user_id_sha1"])){
+ 
+$information_user_id_sha1 = $_SESSION["information_user_id_sha1"] ; 
+    
+$info_sql = 'SELECT * FROM `information_user` WHERE   `information_user_id_sha1`  ="'.$information_user_id_sha1.'"';
+
+ 
+ 
+ 
+
+
+
+
+
+
+  }
+  else {
+
+ 
+    $liste_projet_admin_id_sha1_user=$liste_projet_admin_id_sha1_user_->tableList_info[0] ; 
+    $info_sql = 'SELECT * FROM `information_user` WHERE   `information_user_id_sha1`  ="'.$liste_projet_admin_id_sha1_user .'"';
+
+ 
+
+
+
+ 
+  }
+
+  $information_user_id_sha1_ = new DatabaseHandler($username, $password);
+  $information_user_name_1_ = new DatabaseHandler($username, $password);
+  $information_user_name_2_ = new DatabaseHandler($username, $password);
+  $information_user_img_path_ = new DatabaseHandler($username, $password);
+  
+  $information_user_id_sha1_ ->getDataFromTable($info_sql, "information_user_id_sha1");
+  $information_user_name_1_ ->getDataFromTable($info_sql, "information_user_name_1");
+  $information_user_name_2_ ->getDataFromTable($info_sql, "information_user_name_2");
+  $information_user_img_path_ ->getDataFromTable($info_sql, "information_user_img_path");
+  
+
+
+  var_dump($information_user_id_sha1_->tableList_info) ; 
+  var_dump($information_user_name_1_ ->tableList_info) ; 
+  
+  var_dump($information_user_name_2_ ->tableList_info) ; 
+  var_dump($information_user_img_path_->tableList_info) ; 
+
+ 
+
+
+?>
+
+
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <?php 
+
+
+echo  $liste_projet_admin_id_sha1_user ; 
+
+?>
+    </div>

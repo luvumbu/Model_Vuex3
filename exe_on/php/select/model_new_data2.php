@@ -12,4 +12,12 @@ $information_user_reg_date_->getDataFromTable($info_sql, "information_user_reg_d
 
 
 
+ 
+
+$liste_projet_admin_id_sha1_user___ = $liste_projet_admin_id_sha1_user_->tableList_info[0]  ; 
+
+
+ 
+
+
 ?>

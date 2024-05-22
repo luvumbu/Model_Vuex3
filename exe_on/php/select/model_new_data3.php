@@ -92,6 +92,7 @@ else {
     }
         ?>
 </div>
+<div class="information_user_reg_date_2"></div>
 <?php 
  
 
@@ -148,5 +149,5 @@ if($plus_element__t==0){
 }
 
 
-
+ 
 ?>

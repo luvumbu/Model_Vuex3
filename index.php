@@ -95,8 +95,9 @@ else {
         <script src="exe_off/js/class.js"></script>
 
 
- 
 
+
+        
 
 </body>
 </html>

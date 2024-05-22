@@ -44,6 +44,11 @@ h3 {
 input{
   width: 100%;
 }
+
+.information_user_reg_date_2{
+  font-weight: bold;
+  text-shadow:  1px 1px black;
+}
  
 </style>
 <style>
