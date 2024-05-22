@@ -53,6 +53,10 @@ if($liste_projet_admin_insert_bool=="1"){
 
     $onclick ="add_picture(this)";
 }
+else {
+    $onclick ="add_picture2(this)";
+
+}
     ?>
  
 <div class="img_background_" id="<?php echo $_liste_projet_admin_id_sha1_ ?>" onclick="<?php echo  $onclick ?>" title="data_children">

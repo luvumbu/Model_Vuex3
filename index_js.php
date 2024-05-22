@@ -223,5 +223,18 @@ function myGreeting() {
 }
  }
 
+ function add_picture2(_this){
+  console.log(_this.id) ;
+
+  
+
+  if(_this.className=="img_background_"){
+    _this.className="img_background_2" ; 
+  }
+  else {
+    _this.className="img_background_" ; 
+  }
+ }
+
 
 </script>
