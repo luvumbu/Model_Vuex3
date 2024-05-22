@@ -22,7 +22,7 @@ if($liste_projet_admin_insert_bool=="1"){
 <?php
 }
 else{
-echo  $_liste_projet_admin_name1 ;
+echo  "<h1>".$_liste_projet_admin_name1."</h1>" ;
 }
             ?>
           </h2>
@@ -32,10 +32,12 @@ echo  $_liste_projet_admin_name1 ;
 if($liste_projet_admin_insert_bool=="1"){
 
     $onclick ="add_picture(this)";
+    $img_src="https://cdn.icon-icons.com/icons2/912/PNG/512/add-picture_icon-icons.com_71785.png" ; 
 }
     ?>
+ 
+<div class="img_background_ cursor_pointer" id="<?php echo $_liste_projet_admin_id_sha1_ ?>" onclick="<?php echo  $onclick ?>" title="data_children">
 
-<div class="img_background_" id="<?php echo $_liste_projet_admin_id_sha1_ ?>" onclick="<?php echo  $onclick ?>" title="data_children">
                 <img src="<?php echo  $img_src ?>" alt="" srcset="">
           </div>
 <?php 
@@ -50,12 +52,13 @@ if($liste_projet_admin_insert_bool=="1"){
           if($liste_projet_admin_insert_bool=="1"){
 ?>
           <textarea title="<?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" id="<?php echo 'liste_projet_admin_name2_' . $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" onkeyup="liste_projet_admin_key_up(this)" value="<?php echo "" ?>">
-          <?php echo $_liste_projet_admin_name2 ?>
+          <?php echo "<h3>".$_liste_projet_admin_name2."</h3>" ?>
 </textarea>
 <?php 
           }
           else {
-          echo $_liste_projet_admin_name2   ; 
+
+          echo "<h1>".$_liste_projet_admin_name2."</h1>"   ; 
           }
 
           ?>
@@ -96,3 +99,5 @@ if($plus_element__t==0){
 
 
 ?>
+
+ 

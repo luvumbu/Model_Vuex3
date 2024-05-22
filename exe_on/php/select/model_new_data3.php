@@ -22,7 +22,7 @@ if($liste_projet_admin_insert_bool=="1"){
 <?php
 }
 else{
-echo  $_liste_projet_admin_name1 ;
+echo  "<h3>".$_liste_projet_admin_name1."<h3>" ;
 }
             ?>
           </h2>
@@ -50,12 +50,12 @@ if($liste_projet_admin_insert_bool=="1"){
           if($liste_projet_admin_insert_bool=="1"){
 ?>
           <textarea title="<?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" id="<?php echo 'liste_projet_admin_name2_' . $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" onkeyup="liste_projet_admin_key_up(this)" value="<?php echo "" ?>">
-          <?php echo $_liste_projet_admin_name2 ?>
+          <?php echo "<h3>".$_liste_projet_admin_name2."</h3>" ?>
 </textarea>
 <?php 
           }
           else {
-          echo $_liste_projet_admin_name2   ; 
+          echo "<h3>".$_liste_projet_admin_name2."</h3>"   ; 
           }
 
           ?>

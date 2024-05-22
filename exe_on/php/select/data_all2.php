@@ -1,7 +1,5 @@
 <div class="card text-center max_height" id="data_popular">
-      <h3>Mes projet</h3>
-
-     
+ 
 
 <?php
  
@@ -24,7 +22,7 @@
       $liste_projet_admin_name2_->getDataFromTable($info_sql,"liste_projet_admin_name2");
       $liste_projet_admin_img_path_->getDataFromTable($info_sql,"liste_projet_admin_img_path");
       
-
+ 
 
       for($a = 0 ; $a <count($liste_projet_admin_id_sha1_->tableList_info); $a ++) {
         $liste_projet_admin_id_sha1__=  $liste_projet_admin_id_sha1_->tableList_info[$a] ; 
@@ -93,5 +91,11 @@
   }
   .display_none{
     display: none;
+  }
+  h3 {
+    margin-bottom: 50px;
+  }
+  h1 {
+    margin: 25px;
   }
 </style>

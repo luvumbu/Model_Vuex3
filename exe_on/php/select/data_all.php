@@ -1,5 +1,5 @@
 <div class="card text-center max_height" id="data_popular">
-      <h3>Mes projet</h3>
+       
 
      
 
@@ -35,15 +35,15 @@
 
         ?>
       <div class="fakeimg cursor_pointer">
- 
-        <div>
-          <?php  echo $liste_projet_admin_name1__.'...' ?>
-        </div>   
-        <div>
+      <div>
           <?php
           echo $a ;
           ?>
         </div>
+        <div>
+          <?php  echo $liste_projet_admin_name1__.'...' ?>
+        </div>   
+
         <br/>
         <?php
         if($liste_projet_admin_id_sha1__!=$information_user_id_sha1){

@@ -12,16 +12,20 @@
 
  
 <div class="index_class_1">
+  <h1>
+
+
   <div>
     <p class="index_class_2">
       <b id="titre_page1"></b>
     </p>
     <p>
-      Avec <b id="titre_page2"></b>, partagez et restez en
+      Avec <b id="titre_page2">Bokonzi</b>, partagez et restez en
       contact avec votre entourage.<!-- <a id="listt_projet" href="blog.php">Voir tous les projet</a> -->
       <div id="cookie_info_id"></div>
     </p>
   </div>
+  </h1>
   <div class="index_class_3" id="form_1">
     <div>
 
@@ -90,8 +94,8 @@ if( $_SERVER['SERVER_NAME']=="localhost"){
 <div class="display_none" id="SERVER_NAME"><?php echo $_SERVER['SERVER_NAME'] ?></div>
  
 <script>
-  document.getElementById("titre_page1").innerHTML =document.getElementById("SERVER_NAME").innerHTML;
-  document.getElementById("titre_page2").innerHTML =document.getElementById("SERVER_NAME").innerHTML; 
+ // document.getElementById("titre_page1").innerHTML =document.getElementById("SERVER_NAME").innerHTML;
+ // document.getElementById("titre_page2").innerHTML =document.getElementById("SERVER_NAME").innerHTML; 
 </script>
 <?php 
     require_once 'form_log_dbd_user_on_link.php' ; 
