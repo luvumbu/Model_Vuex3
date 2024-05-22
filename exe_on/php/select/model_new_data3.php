@@ -1,6 +1,10 @@
 <?php
 
-
+if (class_exists('Get_anne')) {
+  
+} else {
+     require 'class/Get_anne.php';
+}
  
 for ($a = 0; $a < count($liste_projet_admin_id_sha1_->tableList_info); $a++) {
 
@@ -10,7 +14,7 @@ for ($a = 0; $a < count($liste_projet_admin_id_sha1_->tableList_info); $a++) {
     $_liste_projet_admin_id_sha1_ = $liste_projet_admin_id_sha1_->tableList_info[$a];
     $_information_user_reg_date_ = $information_user_reg_date_>$tableList_info[$a];
 
- 
+
  
   $information_user_reg_date__ = new Get_anne($information_user_reg_date_->tableList_info[$a] );
 
