@@ -22,6 +22,7 @@ body{
   overflow-y: scroll;
   scrollbar-color: #584e80 black;
 }
+ 
 </style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
@@ -31,6 +32,9 @@ body {
 }
 h3 {
   text-align: justify;
+}
+#data_all_colors{
+  background-color:#584e80;
 }
 </style>
 </style>

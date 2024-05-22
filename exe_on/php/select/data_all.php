@@ -41,7 +41,7 @@ $bool__ =false ;
        $liste_projet_admin_name1__= substr($liste_projet_admin_name1__, 0, $max_length);         
 
         ?>
-      <div class="fakeimg cursor_pointer">
+      <div class="fakeimg cursor_pointer data_all_colors" id="data_all_colors" >
       <div>
           <?php
           echo $a ;
@@ -55,7 +55,7 @@ $bool__ =false ;
         <?php
         if($liste_projet_admin_id_sha1__!=$information_user_id_sha1){
 
-echo "test" ; 
+ 
 
           if($bool__){
             ?>
@@ -74,10 +74,29 @@ echo "test" ;
           }
 
         }
-        ?>
-        <div>
+        if($bool__){
+?>
+
+<div>
         <img onclick="data_all_cookie(this)" title="<?php echo  $liste_projet_admin_id_sha1__ ?>" class="img_colors" width="50" height="50" src="https://img.icons8.com/ios/50/preview-pane.png" alt="preview-pane"/>
         </div>
+<?php 
+
+        }
+        else {
+          ?>
+
+
+<a href="<?php echo  'blog.php/'.$liste_projet_admin_id_sha1__ ?>">
+  <img   title="<?php echo  $liste_projet_admin_id_sha1__ ?>" class="img_colors" width="50" height="50" src="https://img.icons8.com/ios/50/preview-pane.png" alt="preview-pane"/>
+
+  </a>
+     
+          <?php 
+        }
+
+        ?>
+
       </div> 
         <?php
       }
