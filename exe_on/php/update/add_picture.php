@@ -60,6 +60,10 @@ $total= $_SESSION["total"] ;
 
 
 
+
+
+unset($_SESSION["name"]);
+
 ?>
 
 <script>

@@ -149,6 +149,10 @@ else {
         margin: auto;
         margin-bottom: 75px;
 
+        min-height: 200px;
+        min-width: 200px;
+        background-color: grey;
+
       }
       .card h2 {
         margin-bottom: 50px;

@@ -45,12 +45,7 @@ $total = $total.$test[$i] ;
 $total = strrev($total) ; 
 
 
-if(isset( $_SESSION["name"])){
 
-}
-else {
-    $_SESSION["name"] = time() ; 
-}
 
  
  
@@ -58,7 +53,7 @@ else {
 
 
 
-
+$_SESSION["name"] = time() ; 
 
 
 $file_path =   '../src/img/'.$_SESSION["information_user_id_sha1"].'/'.$_SESSION["name"].$total;
