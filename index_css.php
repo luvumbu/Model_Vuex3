@@ -39,6 +39,7 @@ h3 {
 .information_user_reg_date_{
   color: rgba(0,0,0,0.4);
   margin-bottom: 60px;
+  margin-top: 60px;
 }
 input{
   width: 100%;
@@ -84,6 +85,8 @@ input{
             margin: auto; /* Centre l'image horizontalement si elle est plus petite */
             position: relative;
             background-color: black; 
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
         .img_background_:hover{
           cursor: pointer;
@@ -129,5 +132,10 @@ input{
      
             text-align: center;
         
+        }
+
+        h3 {
+          margin-top: 60px; 
+          margin-bottom: 60px;
         }
     </style>

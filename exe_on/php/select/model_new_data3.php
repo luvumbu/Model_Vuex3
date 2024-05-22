@@ -1,5 +1,5 @@
 <?php
-
+$img_background = "img_background_2" ; 
 if (class_exists('Get_anne')) {
   
 } else {
@@ -59,7 +59,7 @@ else {
 }
     ?>
  
-<div class="img_background_" id="<?php echo $_liste_projet_admin_id_sha1_ ?>" onclick="<?php echo  $onclick ?>" title="data_children">
+<div class="<?php echo $img_background ?>" id="<?php echo $_liste_projet_admin_id_sha1_ ?>" onclick="<?php echo  $onclick ?>" title="data_children">
                 <img src="<?php echo  $img_src ?>" alt="" srcset="">
 </div>
 <div class="information_user_reg_date_">
