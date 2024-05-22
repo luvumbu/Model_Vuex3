@@ -34,7 +34,7 @@ h3 {
   text-align: justify;
 }
 #data_all_colors{
-  background-color:#584e80;
+  background-color:black;
 }
 .information_user_reg_date_{
   color: rgba(0,0,0,0.4);
