@@ -73,25 +73,87 @@ $info_sql = 'SELECT * FROM `information_user` WHERE   `information_user_id_sha1`
   
 
 
-  var_dump($information_user_id_sha1_->tableList_info) ; 
-  var_dump($information_user_name_1_ ->tableList_info) ; 
+  $information_user_id_sha1____ =$information_user_id_sha1_->tableList_info[0] ; 
+  $information_user_name_1____ =$information_user_name_1_ ->tableList_info[0] ; 
   
-  var_dump($information_user_name_2_ ->tableList_info) ; 
-  var_dump($information_user_img_path_->tableList_info) ; 
+  $information_user_name_2____ =$information_user_name_2_ ->tableList_info[0] ; 
+  $information_user_img_path____ =$information_user_img_path_->tableList_info[0] ; 
 
+ 
+ 
  
 
 
+if(give_url()=="index.php"){
+  $information_user_img_path____ = str_replace("../","",  $information_user_img_path____);
+
+
+  if($_SESSION["information_user_id_sha1"]){
+    ?>
+
+    <h2>
+    <input onkeyup="information_user_key_up()" id="information_user_name_1" type="text" value="<?php echo  $information_user_name_1____ ?>" placeholder="Votre nom" >       
+
+    </h2>
+    <img id="data_user_img" onclick="add_picture(this)" title="data_user"  src="<?php echo $information_user_img_path____ ?>" alt="" class="data_user_src">
+
+    
+    <h2>
+    <input onkeyup="information_user_key_up()" id="information_user_name_2" type="text" value="<?php echo  $information_user_name_2____ ?>" placeholder="Votre nom" >       
+
+    </h2>
+    <?php
+          }
+          else {
+?>
+
+<h2 id="information_user_name_1_01"><?php echo  $information_user_name_1____ ?></h2>
+
+<img src="<?php echo $information_user_img_path____ ?>" alt="" class="data_user_src">
+
+<h2 id="information_user_name_2_01"><?php echo  $information_user_name_2____ ?></h2>
+<?php 
+          }
+}
+else {
+
+
+  
+  //    <h2>
+    ?>
+
+<h2 id="information_user_name_1_01"><?php echo  $information_user_name_1____ ?></h2>
+
+<img src="<?php echo $information_user_img_path____ ?>" alt="" class="data_user_src">
+
+<h2 id="information_user_name_2_01"><?php echo  $information_user_name_2____ ?></h2>
+
+<?php 
+
+
+}
 ?>
 
 
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
       <?php 
 
 
-echo  $liste_projet_admin_id_sha1_user ; 
+ 
 
 ?>
     </div>
+
+    <style>
+      .data_user_src{
+        max-width: 300px;
+        margin: auto;
+        margin-bottom: 75px;
+
+      }
+      .card h2 {
+        margin-bottom: 50px;
+        margin-top: 50px;
+
+      }
+   
+    </style>
