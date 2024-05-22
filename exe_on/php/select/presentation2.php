@@ -98,6 +98,8 @@ $information_user_img_path = new DatabaseHandler($username ,$password);
 
 
 
+
+
 if(give_url()=="index.php"){
   $info_sql ='SELECT * FROM `information_user` WHERE 1 LIMIT 1 ' ; 
   

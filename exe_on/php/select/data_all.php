@@ -40,6 +40,9 @@ $bool__ =false ;
         // Utilisation de substr pour obtenir les 5 premiers caractères
        $liste_projet_admin_name1__= substr($liste_projet_admin_name1__, 0, $max_length);         
 
+       $liste_projet_admin_img_path________ = str_replace("../","",$liste_projet_admin_img_path_->tableList_info[$a]);
+
+     
         ?>
       <div class="fakeimg cursor_pointer data_all_colors" id="data_all_colors" >
       <div>
@@ -75,17 +78,29 @@ $bool__ =false ;
 
         }
         if($bool__){
+
 ?>
 
 <div>
+<img src="<?php echo $liste_projet_admin_img_path________ ?>" alt="" srcset="" class="data_all_src">
+
         <img onclick="data_all_cookie(this)" title="<?php echo  $liste_projet_admin_id_sha1__ ?>" class="img_colors" width="50" height="50" src="https://img.icons8.com/ios/50/preview-pane.png" alt="preview-pane"/>
         </div>
 <?php 
 
         }
         else {
-          ?>
+ 
+     if(give_url()=="index.php"){
 
+     }
+     else {
+      $liste_projet_admin_img_path________ = "../".$liste_projet_admin_img_path________ ; 
+
+     }
+
+          ?>
+<img src="<?php echo $liste_projet_admin_img_path________ ?>" alt="" srcset="" class="data_all_src">
 
 <a href="<?php echo  'blog.php/'.$liste_projet_admin_id_sha1__ ?>">
 
@@ -143,5 +158,9 @@ else {
   }
   .display_none{
     display: none;
+  }
+  .data_all_src{
+    width: 50px;
+    height: 50px;
   }
 </style>
