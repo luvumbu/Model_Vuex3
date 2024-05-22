@@ -33,6 +33,9 @@ body{
 body {
   font-family: "Sofia", sans-serif;
 }
+h3 {
+  text-align: justify;
+}
 </style>
 </style>
  
