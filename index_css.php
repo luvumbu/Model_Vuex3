@@ -116,7 +116,9 @@ input{
            max-width: 50%;
            min-height: 50%;
            text-align: center;
- 
+           min-height: 100px;
+            min-width: 100px;
+            background-color: rgba(0,0,0,0.4);
            margin: auto;
         }
         .img_background_2 img{

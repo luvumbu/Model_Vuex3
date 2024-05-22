@@ -1,5 +1,8 @@
 <?php
+$img_background = "img_background_" ; 
 $img_background = "img_background_2" ; 
+
+
 if (class_exists('Get_anne')) {
   
 } else {
@@ -8,7 +11,24 @@ if (class_exists('Get_anne')) {
  
 for ($a = 0; $a < count($liste_projet_admin_id_sha1_->tableList_info); $a++) {
 
-    $img_src =  str_replace("../", "", $liste_projet_admin_img_path_->tableList_info[$a]);
+
+    if($presentation2_index_php){
+        $img_src =  str_replace("../", "", $liste_projet_admin_img_path_->tableList_info[$a]);
+
+    }
+    else {
+    
+
+
+    if(give_url()=="index.php"){
+        $img_src =  str_replace("../", "", $liste_projet_admin_img_path_->tableList_info[$a]);
+    }
+    else {
+        $img_src =  str_replace("", "", $liste_projet_admin_img_path_->tableList_info[$a]);
+
+    }
+
+    }
     $_liste_projet_admin_name1 =  $liste_projet_admin_name1_->tableList_info[$a];
     $_liste_projet_admin_name2 =  $liste_projet_admin_name2_->tableList_info[$a];
     $_liste_projet_admin_id_sha1_ = $liste_projet_admin_id_sha1_->tableList_info[$a];

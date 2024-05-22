@@ -88,7 +88,25 @@ $bool__ =false ;
 
 
 <a href="<?php echo  'blog.php/'.$liste_projet_admin_id_sha1__ ?>">
+
+
+<?php
+
+if($presentation2_index_php){
+?>
   <img   title="<?php echo  $liste_projet_admin_id_sha1__ ?>" class="img_colors" width="50" height="50" src="https://img.icons8.com/ios/50/preview-pane.png" alt="preview-pane"/>
+<?php 
+}
+else {
+  ?>
+<a href="<?php echo  $liste_projet_admin_id_sha1__ ?>" >
+<img   title="<?php echo  $liste_projet_admin_id_sha1__ ?>" class="img_colors" width="50" height="50" src="https://img.icons8.com/ios/50/preview-pane.png" alt="preview-pane"/>
+
+</a>
+
+<?php 
+}
+?>
 
   </a>
      

@@ -1,10 +1,11 @@
-<?php
-session_start();
+<?php 
+session_start() ; 
+
+
 //$_SESSION['liste_projet_admin_insert'] ="1716104659";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <title>Bokonzi</title>
   <meta charset="utf-8">
@@ -14,68 +15,76 @@ session_start();
   <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBKPobqhRJiwU_oWCatudWL5RM0UVfTWgfku9DwDKLutYO90g3M3SHqo4OVuGQWqqFSsU&usqp=CAU">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-
-<body>
-  <?php
-  $path_DatabaseHandler = 'class/DatabaseHandler.php';
-  $form_log_dbd         = 'view/off/form_log_dbd.php';
-  $form_log_dbd_user_on = 'view/on/form_log_dbd_user_on.php';
-  $log = 'view/on/log.php';
-
-  $fichier_connexion    = 'class/config.php';
-  $reload_page          = '<meta http-equiv="refresh" content="0;URL=">';
-
-  require_once $path_DatabaseHandler;
-  require_once 'class/give_url.php';
+<body>  
 
 
-  if (file_exists($fichier_connexion)) {
-    require_once $fichier_connexion;
-    $databaseHandler = new DatabaseHandler($username, $password);
-    if (!$databaseHandler->verif) {
-      unlink($fichier_connexion);
-      //   echo $reload_page  ;
-    }
 
-    if ($databaseHandler->existance_table("information_user") == 0) {
-      // verification de l'existance de la table information_user
-      // si la table n'existe pas on efface le fichier configuration et on recharge la page
-      unlink($fichier_connexion);
-      // echo $reload_page  ;
-    }
-  } else {
-    require_once $form_log_dbd;
-  }
+
+<?php 
+$path_DatabaseHandler ='class/DatabaseHandler.php' ;  
+$form_log_dbd         ='view/off/form_log_dbd.php' ;
+$form_log_dbd_user_on ='view/on/form_log_dbd_user_on.php';
+$page_principal_index ="index.php" ; 
+$give_url = "class/give_url.php" ; 
+$log ='view/on/log.php';
+
+$fichier_connexion    ='class/config.php' ;
+$reload_page          ='<meta http-equiv="refresh" content="0;URL=">';
+ 
+require_once $path_DatabaseHandler; 
+require_once $give_url; 
+
+
+if (file_exists($fichier_connexion)) {
+require_once $fichier_connexion;   
+$databaseHandler = new DatabaseHandler($username, $password); 
+if(!$databaseHandler->verif) {   
+    unlink($fichier_connexion) ;     
+ //   echo $reload_page  ;
+} 
+
+if( $databaseHandler->existance_table("information_user")==0){
+  // verification de l'existance de la table information_user
+  // si la table n'existe pas on efface le fichier configuration et on recharge la page
+  unlink($fichier_connexion) ;     
+ // echo $reload_page  ;
+}
+    
+   
+  } 
+else {   
+    require_once $form_log_dbd; 
+} 
   //echo give_url() ;
-  if (give_url() == "index.php") {
-  ?>
-    <script src="exe_off/js/const_all.js"></script>
-    <script src="exe_off/js/class.js"></script>
-  <?php
-  } else {
-    require_once 'exe_off/js/const_all.php';
-    require_once 'exe_off/js/class.php';
+   
+  
+ 
+  
+
+  require_once 'index_js.php' ; 
+  require_once 'index_css.php' ; 
+  require_once 'class/Get_anne.php' ; 
+  require_once 'exe_on/php/select/log_css.php' ; 
+
+
+  
+  if(!isset($_SESSION["information_user_id_sha1"])){     
+       require_once 'exe_on/php/select/presentation2.php' ; 
   }
 
-  require_once 'index_js.php';
-  require_once 'index_css.php';
-  require_once 'class/Get_anne.php';
-  require 'exe_on/php/select/log_css.php';
-  if (!isset($_SESSION["information_user_id_sha1"])) {
-    //  require_once 'exe_on/php/select/presentation.php' ; 
-    require_once 'exe_on/php/select/presentation3.php';
-  }
-  ?>
-  <a href="../index.php">
-    <h3><img width="50" height="50" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1" /></h3>
-  </a>
+ 
 
 
+  
+?>
+ 
+ 
+ 
+     
 
 
-
+ 
 
 
 </body>
-
 </html>
