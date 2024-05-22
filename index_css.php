@@ -14,11 +14,7 @@
   text-align: justify;
   }
 
-.img_background_{
-  min-height: 200px;
-  min-height: 200px;
-  color:white;
-}
+ 
 
  
 body{

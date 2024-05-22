@@ -15,12 +15,14 @@
             margin-top: 50px; 
             margin-bottom: 50px; 
             max-width: 100%;
-            max-height: 100%;
-            border: 1px solid rgba(0,0,0,0.2);
+            max-height: 400px;
+         
             position: relative;
             height: 100%;
             overflow: hidden; /* Empêche l'image de dépasser la hauteur de la div */
             background-color: black; 
+            min-height: 100px;
+            min-width: 100px;
 
         }
 
@@ -35,6 +37,9 @@
             margin: auto; /* Centre l'image horizontalement si elle est plus petite */
             position: relative;
             background-color: black; 
+        }
+        .img_background_:hover{
+          cursor: pointer;
         }
         textarea{
             width: 100%;
