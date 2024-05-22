@@ -16,17 +16,23 @@ session_start() ;
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>  
+
+
+
+
 <?php 
 $path_DatabaseHandler ='class/DatabaseHandler.php' ;  
 $form_log_dbd         ='view/off/form_log_dbd.php' ;
 $form_log_dbd_user_on ='view/on/form_log_dbd_user_on.php';
+$page_principal_index ="index.php" ; 
+$give_url = "class/give_url.php" ; 
 $log ='view/on/log.php';
 
 $fichier_connexion    ='class/config.php' ;
 $reload_page          ='<meta http-equiv="refresh" content="0;URL=">';
  
 require_once $path_DatabaseHandler; 
-require_once 'class/give_url.php'; 
+require_once $give_url; 
 
 
 if (file_exists($fichier_connexion)) {
@@ -45,7 +51,7 @@ if( $databaseHandler->existance_table("information_user")==0){
 }
     
      if(isset($_SESSION["information_user_id_sha1"])){     
-      require_once $log; 
+         require_once $log; 
       ?>
 <style>
   .presentation{
@@ -62,42 +68,31 @@ else {
     require_once $form_log_dbd; 
 } 
   //echo give_url() ;
-  if(give_url()=="index.php"){
-    ?>
-        <script src="exe_off/js/const_all.js"></script>
-        <script src="exe_off/js/class.js"></script>
-    <?php
-  }
-  else {
-  require_once 'exe_off/js/const_all.php' ; 
-  require_once 'exe_off/js/class.php' ; 
-  }
+   
+  
+ 
+  
 
   require_once 'index_js.php' ; 
   require_once 'index_css.php' ; 
-
   require_once 'class/Get_anne.php' ; 
-
-  require 'exe_on/php/select/log_css.php' ; 
-
+  require_once 'exe_on/php/select/log_css.php' ; 
 
 
-
-
-
+  
   if(!isset($_SESSION["information_user_id_sha1"])){     
-    //  require_once 'exe_on/php/select/presentation.php' ; 
-      require_once 'exe_on/php/select/presentation2.php' ; 
-
+       require_once 'exe_on/php/select/presentation2.php' ; 
   }
+
+ 
 
 
   
 ?>
-
-
  
-
+ 
+ 
+        <script src="exe_off/js/class.js"></script>
 
 
  

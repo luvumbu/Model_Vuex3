@@ -21,9 +21,7 @@ exe_on/php/select/log_data:
 </head>
 
 <body>
-  <div class="header">
-    <h2>Blog Name</h2>
-  </div>
+ 
   <div>
     <img onclick="destroy()" class="cursor_pointer" width="50" height="50" src="https://img.icons8.com/fluency-systems-regular/50/shutdown.png" alt="shutdown" />
     <img title="" onclick="liste_projet_admin_insert(this)" width="64" height="64" src="https://img.icons8.com/flat-round/64/plus.png" alt="plus" />

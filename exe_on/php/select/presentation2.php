@@ -1,5 +1,5 @@
 <?php
-
+ 
 /*
 $liste_projet_admin_id_ = new DatabaseHandler($username, $password);
 $liste_projet_admin_id_sha1_ = new DatabaseHandler($username, $password);
@@ -41,7 +41,9 @@ $liste_projet_admin_id_sha1__ = $liste_projet_admin_id_sha1_->tableList_info[0] 
 require 'model_new_data1.php' ; 
 $info_sql = 'SELECT * FROM `liste_projet_admin` WHERE  `liste_projet_admin_sha1_parent` ="'.$liste_projet_admin_id_sha1__.'" ORDER BY  `liste_projet_admin_id` ASC ';
 require 'model_new_data2.php' ; 
-require 'model_new_data3_1.php' ; 
+//require 'model_new_data3_1.php' ; 
+require 'model_new_data3.php' ; 
+
  
  
  ?>
@@ -50,7 +52,7 @@ require 'model_new_data3_1.php' ;
 <?php  
  
          require 'data_user2.php' ; 
-         require 'data_all2.php' ; 
+         require 'data_all.php' ; 
 
 ?>
  

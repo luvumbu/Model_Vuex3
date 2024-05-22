@@ -13,9 +13,16 @@
       $liste_projet_admin_name2_ = new DatabaseHandler($username ,$password); 
       $liste_projet_admin_img_path_ =new DatabaseHandler($username ,$password); 
 
+$bool__ =false ; 
 
-      $info_sql ='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1_user`="'.$information_user_id_sha1.'" AND `liste_projet_admin_sha1_parent` =""  ' ; 
-      
+      if(!isset($_SESSION["information_user_id_sha1"])){     
+      $info_sql ='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_sha1_parent` =""  ' ; 
+        
+   }
+   else {
+    $info_sql ='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1_user`="'.$information_user_id_sha1.'" AND `liste_projet_admin_sha1_parent` =""  ' ; 
+    $bool__ = true ; 
+   }
       
       $liste_projet_admin_id_->getDataFromTable($info_sql,"liste_projet_admin_id");
       $liste_projet_admin_id_sha1_->getDataFromTable($info_sql,"liste_projet_admin_id_sha1");
@@ -47,19 +54,25 @@
         <br/>
         <?php
         if($liste_projet_admin_id_sha1__!=$information_user_id_sha1){
-?>
+
+echo "test" ; 
+
+          if($bool__){
+            ?>
 
  
-<img class="img_colors" title="<?php echo $liste_projet_admin_id_sha1__ ?>" onclick="remove_block_(this)"  width="50" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
+            <img class="img_colors" title="<?php echo $liste_projet_admin_id_sha1__ ?>" onclick="remove_block_(this)"  width="50" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
+            
+              <div class="display_none" id="<?php echo "remove_".$liste_projet_admin_id_sha1__ ?>" title="<?php echo $liste_projet_admin_id_sha1__ ?>" onclick="remove_block(this)">
+              
+              <img class="img_colors" width="50" height="50" src="https://img.icons8.com/fluency/50/delete-forever.png" alt="delete-forever"/>
+              </div>
+            
+            
+            
+            <?php 
+          }
 
-  <div class="display_none" id="<?php echo "remove_".$liste_projet_admin_id_sha1__ ?>" title="<?php echo $liste_projet_admin_id_sha1__ ?>" onclick="remove_block(this)">
-  
-  <img class="img_colors" width="50" height="50" src="https://img.icons8.com/fluency/50/delete-forever.png" alt="delete-forever"/>
-  </div>
-
-
-
-<?php 
         }
         ?>
         <div>
@@ -73,7 +86,7 @@
  ?>
 </div>
 <style>
-  .img_colors{
+  .img_colors{ 
     background-color: white;
     padding: 10px;
   }
@@ -82,7 +95,7 @@
     justify-content: space-around;
     transition: 1s all ; 
     margin-bottom: 5px;
-    background-color: #584e80;
+     
     color: white;
 
   }
