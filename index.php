@@ -28,6 +28,18 @@ $page_principal_index ="index.php" ;
 $give_url = "class/give_url.php" ; 
 $log ='view/on/log.php';
 
+$information_user_id_sha1_session= 'information_user_id_sha1' ; 
+
+
+$index_js= 'index_js.php';
+$index_css= 'index_css.php';
+$Get_anne= 'class/Get_anne.php';
+$log_css= 'exe_on/php/select/log_css.php';
+$presentation2= 'exe_on/php/select/presentation2.php' ; 
+
+ 
+
+
 $fichier_connexion    ='class/config.php' ;
 $reload_page          ='<meta http-equiv="refresh" content="0;URL=">';
  
@@ -50,7 +62,7 @@ if( $databaseHandler->existance_table("information_user")==0){
  // echo $reload_page  ;
 }
     
-     if(isset($_SESSION["information_user_id_sha1"])){     
+     if(isset($_SESSION[$information_user_id_sha1_session])){     
          require_once $log; 
       ?>
 <style>
@@ -73,15 +85,15 @@ else {
  
   
 
-  require_once 'index_js.php' ; 
-  require_once 'index_css.php' ; 
-  require_once 'class/Get_anne.php' ; 
-  require_once 'exe_on/php/select/log_css.php' ; 
+  require_once $index_js ; 
+  require_once $index_css ; 
+  require_once $Get_anne ; 
+  require_once $log_css ; 
 
 
   
-  if(!isset($_SESSION["information_user_id_sha1"])){     
-       require_once 'exe_on/php/select/presentation2.php' ; 
+  if(!isset($_SESSION[$information_user_id_sha1_session])){     
+       require_once $presentation2 ; 
   }
 
  
