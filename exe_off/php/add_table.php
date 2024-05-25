@@ -1,9 +1,6 @@
 <?php
 
-$databaseHandler = new DatabaseHandler($dbname, $password);
- 
-
- 
+$databaseHandler = new DatabaseHandler($dbname, $password); 
 
 $databaseHandler->set_column_names("information_user_id");
 $databaseHandler->set_column_names("information_user_id_sha1");

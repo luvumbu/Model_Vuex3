@@ -1,9 +1,11 @@
 <?php 
 session_start() ; 
+ 
 
 
 //$_SESSION['liste_projet_admin_insert'] ="1716104659";
 ?>
+ 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,7 +17,7 @@ session_start() ;
   <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBKPobqhRJiwU_oWCatudWL5RM0UVfTWgfku9DwDKLutYO90g3M3SHqo4OVuGQWqqFSsU&usqp=CAU">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>  
+<body onmousemove="myFunction(event)" onmouseout="clearCoor()">  
 
 
 
@@ -42,9 +44,11 @@ $presentation2= 'exe_on/php/select/presentation2.php' ;
 
 $fichier_connexion    ='class/config.php' ;
 $reload_page          ='<meta http-equiv="refresh" content="0;URL=">';
- 
+require_once "class/ascii_de_mot.php"; 
 require_once $path_DatabaseHandler; 
 require_once $give_url; 
+
+
 
 
 if (file_exists($fichier_connexion)) {
@@ -103,13 +107,36 @@ else {
 ?>
  
  
+ <script>
+function myFunction(e) {
+  let x = e.clientX;
+  let y = e.clientY;
+  let coor = "Coordinates: (" + x + "," + y + ")";
  
+
+
+  console.log(coor) ; 
+
+  let height = screen.width;
+ console.log( height+"px") ; 
+}
+
+function clearCoor() {
+ // document.getElementById("demo").innerHTML = "";
+
+
+}
+</script>
         <script src="exe_off/js/class.js"></script>
 
 
 
 
-        
+        <style>
+          textarea{
+            color:black ; 
+          }
+        </style>
 
 </body>
 </html>
