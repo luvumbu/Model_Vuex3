@@ -51,8 +51,7 @@ $bool__ =false ;
           ?>
         </div>
         <div>
-
-          <?php  echo $mot_decode = mot_de_ascii($liste_projet_admin_name1__).'...' ;  ?>
+          <?php  echo $liste_projet_admin_name1__.'...' ?>
         </div>   
 
         <br/>

@@ -31,21 +31,6 @@ for ($a = 0; $a < count($liste_projet_admin_id_sha1_->tableList_info); $a++) {
     }
     $_liste_projet_admin_name1 =  $liste_projet_admin_name1_->tableList_info[$a];
     $_liste_projet_admin_name2 =  $liste_projet_admin_name2_->tableList_info[$a];
-
-
-
- 
-
-
- 
-// Exemple d'utilisation avec une chaîne de caractères ASCII
- 
-$_liste_projet_admin_name1 = mot_de_ascii( $_liste_projet_admin_name1);
-$_liste_projet_admin_name2 = mot_de_ascii( $_liste_projet_admin_name2);
-
- 
-
-
     $_liste_projet_admin_id_sha1_ = $liste_projet_admin_id_sha1_->tableList_info[$a];
     $_information_user_reg_date_ = $information_user_reg_date_>$tableList_info[$a];
 
@@ -119,7 +104,9 @@ else {
           <?php 
           if($liste_projet_admin_insert_bool=="1"){
 ?>
-<textarea title="<?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" id="<?php echo 'liste_projet_admin_name2_' . $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" onkeyup="liste_projet_admin_key_up(this)" value="<?php echo "" ?>"><?php echo  $_liste_projet_admin_name2  ?></textarea>
+          <textarea title="<?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" id="<?php echo 'liste_projet_admin_name2_' . $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" onkeyup="liste_projet_admin_key_up(this)" value="<?php echo "" ?>">
+          <?php echo  $_liste_projet_admin_name2  ?>
+</textarea>
 <?php 
           }
           else {

@@ -67,6 +67,8 @@ $ip_address = getIPAddress();
 $databaseHandler00->action_sql("INSERT INTO `information_user` (information_user_id_sha1,information_user_login,information_user_password,information_user_ip) VALUES ('$time','$username','$password_sha1','$REMOTE_ADDR')") ;
 $databaseHandler00->action_sql("INSERT INTO `liste_projet_admin` (liste_projet_admin_id_sha1_user,liste_projet_admin_id_sha1,liste_projet_admin_information_user_login,liste_projet_admin_ip) VALUES ('$time','$time','$username','$REMOTE_ADDR')") ;
 
+
+
 } 
  
 ?>

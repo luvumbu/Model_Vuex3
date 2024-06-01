@@ -69,5 +69,4 @@ return document.getElementById(this.id).title;
 // var monAtribute = new Atribute("test");
 // monAtribute.exe_atribute("class","red");
  
- 
 </script>

@@ -36,12 +36,9 @@ exe_on/php/select/log_data:
       if (isset($_SESSION['liste_projet_admin_insert'])) {
 
         if($_SESSION['liste_projet_admin_insert']== $_SESSION["information_user_id_sha1"]){
-          $liste_projet_admin_insert_bool = "0";
+         
         }
-        else {
-          $liste_projet_admin_insert_bool = "1";
-
-        }
+       
         $liste_projet_admin_id_sha1 = $_SESSION["liste_projet_admin_insert"];
        
 
@@ -50,10 +47,10 @@ exe_on/php/select/log_data:
       } else {
 
         $liste_projet_admin_id_sha1 = $_SESSION["information_user_id_sha1"];
-        $liste_projet_admin_insert_bool = "1";
+       
  
       }
-
+      $liste_projet_admin_insert_bool = "1";
       $plus_element__t = 0 ; 
           require_once "exe_on/php/select/data_parent.php";
           $plus_element__t = 1 ; 

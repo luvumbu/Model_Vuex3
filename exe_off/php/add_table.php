@@ -1,6 +1,9 @@
 <?php
 
-$databaseHandler = new DatabaseHandler($dbname, $password); 
+$databaseHandler = new DatabaseHandler($dbname, $password);
+ 
+
+ 
 
 $databaseHandler->set_column_names("information_user_id");
 $databaseHandler->set_column_names("information_user_id_sha1");
@@ -203,6 +206,38 @@ $databaseHandler2->set_column_types("TEXT  NOT NULL");
  $databaseHandler2->set_column_types("TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
 
 $databaseHandler2->add_table("liste_projet_admin");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$databaseHandler = new DatabaseHandler($dbname, $password);
+ 
+
+ 
+
+$databaseHandler->set_column_names("social_media_id");
+$databaseHandler->set_column_names("social_media_id_user_sha1");
+$databaseHandler->set_column_names("social_media_img");
+$databaseHandler->set_column_names("social_data");
+
+$databaseHandler->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY"); 
+$databaseHandler->set_column_types("TEXT NOT NULL");
+$databaseHandler->set_column_types("TEXT NOT NULL");
+$databaseHandler->set_column_types("TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
+$databaseHandler->add_table("social_media");
 
 
 

@@ -145,4 +145,7 @@ input{
           margin-top: 60px; 
           margin-bottom: 60px;
         }
+        #data_user_img{
+          width: 100%;
+        }
     </style>

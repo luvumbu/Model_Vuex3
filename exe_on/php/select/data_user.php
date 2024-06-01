@@ -1,5 +1,8 @@
 <div class="card">
  <?php 
+
+
+ 
 $liste_projet_admin_id_sha1_user_ = new DatabaseHandler($username, $password);
 
  if(give_url()!="index.php"){
@@ -26,11 +29,10 @@ $liste_projet_admin_id_sha1_user_ ->getDataFromTable($info_sql, "liste_projet_ad
 
  
  
-  
-  
  
 
 
+$data_root = $liste_projet_admin_id_sha1_user_ ->tableList_info[0] ;  
 
   if(isset($_SESSION["information_user_id_sha1"])){
  
@@ -73,14 +75,11 @@ $info_sql = 'SELECT * FROM `information_user` WHERE   `information_user_id_sha1`
   
 
 
+  $information_user_id_sha1____ =$information_user_id_sha1_->tableList_info[0] ; 
+  $information_user_name_1____ =$information_user_name_1_ ->tableList_info[0] ; 
   
-  
-  
- 
+  $information_user_name_2____ =$information_user_name_2_ ->tableList_info[0] ; 
   $information_user_img_path____ =$information_user_img_path_->tableList_info[0] ; 
-
-$information_user_name_1____ =mot_de_ascii($information_user_name_1_ ->tableList_info[0]) ; 
-$information_user_name_2____ = mot_de_ascii($information_user_name_2_ ->tableList_info[0]); 
 
  
  
@@ -88,6 +87,9 @@ $information_user_name_2____ = mot_de_ascii($information_user_name_2_ ->tableLis
 
 
 if(give_url()=="index.php"){
+
+
+
   $information_user_img_path____ = str_replace("../","",  $information_user_img_path____);
 
 
@@ -155,7 +157,7 @@ else {
         min-height: 200px;
         min-width: 200px;
         background-color: grey;
-
+ width: 100%;
       }
       .card h2 {
         margin-bottom: 50px;

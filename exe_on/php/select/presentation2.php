@@ -52,9 +52,6 @@ require 'model_new_data3.php' ;
 
 
 $liste_projet_admin_id_sha1__ = $liste_projet_admin_id_sha1_->tableList_info[0] ; 
-
-
- 
  
 require 'model_new_data1.php' ; 
 $info_sql = 'SELECT * FROM `liste_projet_admin` WHERE  `liste_projet_admin_sha1_parent` ="'.$liste_projet_admin_id_sha1__.'" ORDER BY  `liste_projet_admin_id` ASC ';
@@ -92,12 +89,12 @@ $liste_projet_admin_id_sha1_user____ = $liste_projet_admin_id_sha1_user_->tableL
 
 
  
-
-
- 
 $information_user_name_1 = new DatabaseHandler($username ,$password);   
 $information_user_name_2 = new DatabaseHandler($username ,$password);     
 $information_user_img_path = new DatabaseHandler($username ,$password);     
+
+$information_user_id_sha1_root = new DatabaseHandler($username ,$password);     
+
 
 
 
@@ -123,29 +120,29 @@ $information_user_img_path->getDataFromTable($info_sql,"information_user_img_pat
 
 
 
-$information_user_name_1___ = $information_user_name_1->tableList_info[0] ; 
-$information_user_name_2___ = $information_user_name_2->tableList_info[0] ;
+$information_user_id_sha1_root->getDataFromTable($info_sql,"information_user_id_sha1");
 
-
-
-
-$information_user_name_1___ = mot_de_ascii($information_user_name_1___); 
-$information_user_name_2___ = mot_de_ascii($information_user_name_2___); 
 
  
 
+
+
+$information_user_name_1___ = $information_user_name_1->tableList_info[0] ; 
+$information_user_name_2___ = $information_user_name_2->tableList_info[0] ; 
+$information_user_name_1___ = $information_user_name_1->tableList_info[0] ; 
 $information_user_img_path___ =$information_user_img_path->tableList_info[0] ; 
 
  
 
 
- /*
  
-      
+ 
       require 'data_user.php' ; 
       require 'data_all.php' ; 
+      require 'data_social_media.php' ; 
 
-*/
+
+
 
 
 ?>
