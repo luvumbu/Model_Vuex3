@@ -102,13 +102,19 @@ var_dump($social_media_id->tableList_info ) ;
 
 
                   <div class="display_flex_social_media">
-                       
-                              <a href="<?php echo $social_media_link->tableList_info[$a]; ?>"><?php echo $social_media_name->tableList_info[$a]; ?></a>
+                       <h4>
+                               <a href="<?php echo $social_media_link->tableList_info[$a]; ?>">
+                              
+                              <?php echo $social_media_name->tableList_info[$a]; ?>
+                        
+                        </a>
 
-                     
+                       </h4>
+                       
+                       <a href="<?php echo $social_media_link->tableList_info[$a]; ?>">
                         
                               <img src="<?php echo $social_media_src_ ?>" alt="" srcset="" class="social_media">
-
+                              </a>
                        
                   </div>
             <?php

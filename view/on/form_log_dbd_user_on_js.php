@@ -21,7 +21,7 @@ const info_err = document.getElementById("info_err") ;
 
 
 function information_user_id_sha1_info() {
-  Ajax("information_user_id_sha1_info","view/on/information_user_id_sha1_info.php");
+  Ajax("information_user_id_sha1_info","view/data_user_srcon/information_user_id_sha1_info.php");
 
 
 
