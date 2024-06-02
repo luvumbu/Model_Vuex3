@@ -121,7 +121,21 @@ if($liste_projet_admin_insert_bool =="1"){
 ?>
           <img width="50" onclick="remove_block(this)" title="<?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" class="remove_block cursor_pointer" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1" />
 
-<?php 
+
+
+
+<?php
+if($liste_projet_visibility_->tableList_info[$a]==""){
+
+    $src_img ="https://img.icons8.com/ios/50/visible--v1.png" ;
+ 
+}
+else {
+    $src_img ="https://img.icons8.com/pastel-glyph/50/invisible--v2.png" ;
+
+
+}
+echo '<img width="50" class="cursor_pointer" height="50"  onclick="id_src_visibility(this)" id="id_src_'.$liste_projet_admin_id_sha1_->tableList_info[$a].'" title="'.$liste_projet_admin_id_sha1_->tableList_info[$a].'" src="'.$src_img.'" alt="invisible--v2"/>' ; 
 }
 ?>
     </div>
@@ -137,7 +151,6 @@ if($plus_element__t==0){
       ?>
 
 <img class="plus_element cursor_pointer" title="<?php echo $liste_projet_admin_id_sha1 ?>" onclick="data_parent_plus(this)" width="50" height="50" src="https://img.icons8.com/color/50/add--v1.png" alt="add--v1" />
-
 <?php 
     }
        

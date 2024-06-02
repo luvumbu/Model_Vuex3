@@ -277,4 +277,46 @@ var social_media_link = document.getElementById("link_"+_this.title).value ;
   ok.push(); // envoie l'information au code pkp 
  }
 
+
+function id_src_visibility(_this) {
+
+
+  const  src_img1 ="https://img.icons8.com/ios/50/visible--v1.png" ;
+  const  src_img2 ="https://img.icons8.com/pastel-glyph/50/invisible--v2.png" ;
+
+  console.log(_this.title) ; 
+   liste_projet_visibility = "" ; 
+
+  if(_this.src==src_img1){
+    _this.src=src_img2 ; 
+    liste_projet_visibility = "(0-0)" ; 
+
+  }
+  else {
+    _this.src=src_img1 ; 
+    liste_projet_visibility = "" ; 
+  
+
+  }
+
+
+
+
+  var ok = new Information("exe_on/php/update/id_src_visibility.php"); // création de la classe 
+
+
+  ok.add("liste_projet_visibility",liste_projet_visibility); // ajout d'une deuxieme information denvoi  
+  ok.add("liste_projet_admin_id_sha1",_this.title); // ajout d'une deuxieme information denvoi  
+
+
+  
+ 
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+
+
+
+
+
+}
 </script>

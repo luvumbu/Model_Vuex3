@@ -141,6 +141,8 @@ $databaseHandler2->set_column_names("liste_projet_admin_visibility_name4");
 $databaseHandler2->set_column_names("liste_projet_admin_visibility_name5");
 
 $databaseHandler2->set_column_names("liste_projet_admin_link");
+$databaseHandler2->set_column_names("liste_projet_visibility");
+
 
 
 
@@ -157,6 +159,8 @@ $databaseHandler2->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY"
 $databaseHandler2->set_column_types("TEXT  NOT NULL");
 $databaseHandler2->set_column_types("TEXT  NOT NULL");
 $databaseHandler2->set_column_types("TEXT  NOT NULL");
+$databaseHandler2->set_column_types("TEXT  NOT NULL");
+
 
 
 $databaseHandler2->set_column_types("TEXT  NOT NULL");

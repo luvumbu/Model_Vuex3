@@ -10,7 +10,7 @@ $liste_projet_admin_img_path_->getDataFromTable($info_sql, "liste_projet_admin_i
 $information_user_reg_date_->getDataFromTable($info_sql, "information_user_reg_date");
 
 
-
+$liste_projet_visibility_ ->getDataFromTable($info_sql, "liste_projet_visibility");
 
  
 
