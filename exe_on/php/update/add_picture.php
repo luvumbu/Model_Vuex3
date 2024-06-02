@@ -53,6 +53,16 @@ switch ($_SESSION["id"]) {
    
  break;
 
+
+ case "data_social_media":
+    
+  $liste_projet_admin_id_sha1 = $_SESSION["liste_projet_admin_id_sha1"] ;
+  $file_path= $_SESSION["file_path"]  ; 
+  $total= $_SESSION["total"] ;  
+  $databaseHandler01->action_sql('UPDATE  `social_media` SET `social_media_src` = "'.$file_path.'"  WHERE  `social_media_id_sha1` = "'.$liste_projet_admin_id_sha1.'"') ; 
+
+break;
+
    default:
 
  

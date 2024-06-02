@@ -229,11 +229,20 @@ $databaseHandler = new DatabaseHandler($dbname, $password);
  
 
 $databaseHandler->set_column_names("social_media_id");
+$databaseHandler->set_column_names("social_media_id_sha1");
+
 $databaseHandler->set_column_names("social_media_id_user_sha1");
-$databaseHandler->set_column_names("social_media_img");
-$databaseHandler->set_column_names("social_data");
+
+$databaseHandler->set_column_names("social_media_name");
+$databaseHandler->set_column_names("social_media_link");
+$databaseHandler->set_column_names("social_media_src");
+$databaseHandler->set_column_names("social_date");
 
 $databaseHandler->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY"); 
+$databaseHandler->set_column_types("TEXT NOT NULL");
+$databaseHandler->set_column_types("TEXT NOT NULL");
+
+$databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");

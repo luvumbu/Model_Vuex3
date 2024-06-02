@@ -237,4 +237,44 @@ function myGreeting() {
  }
 
 
+
+ function data_social_media_click(_this) {
+
+  var ok = new Information("exe_on/php/insert/data_social_media_click.php"); // création de la classe 
+  //ok.add("liste_projet_admin_id_sha1", _this.id); // ajout de l'information pour lenvoi 
+  ok.add("id", _this.id); // ajout de l'information pour lenvoi 
+  ok.add("title", _this.title); // ajout de l'information pour lenvoi 
+  ok.push(); // envoie l'information au code pkp 
+
+  _this.style.display="none" ; 
+  console.log(_this.title) ; 
+
+
+  const myTimeout = setTimeout(myTimeout_a, 100);
+
+function myTimeout_a() {
+location.reload() ; 
+}
+
+ }
+
+
+ function data_social_media_key_up(_this){
+var social_media_name = document.getElementById("name_"+_this.title).value ; 
+var social_media_link = document.getElementById("link_"+_this.title).value ; 
+
+ 
+ 
+
+  var ok = new Information("exe_on/php/update/data_social_media_key_up.php"); // création de la classe 
+  ok.add("social_media_name", social_media_name); // ajout de l'information pour lenvoi 
+  ok.add("social_media_link", social_media_link); // ajout d'une deuxieme information denvoi  
+  ok.add("social_media_id_sha1", _this.title); // ajout d'une deuxieme information denvoi  
+
+
+ 
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+ }
+
 </script>
