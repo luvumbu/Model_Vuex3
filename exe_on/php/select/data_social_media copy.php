@@ -93,11 +93,7 @@ var_dump($social_media_id->tableList_info ) ;
  ?>
                   <input type="text" value="<?php echo $social_media_name->tableList_info[$a]; ?>" class="social_media_name" onkeyup="data_social_media_key_up(this)" placeholder="Name social media" title="<?php echo  $social_media_id_sha1->tableList_info[$a]; ?>" id="<?php echo "name_" . $social_media_id_sha1->tableList_info[$a]; ?>">
                   <input type="text" value="<?php echo $social_media_link->tableList_info[$a]; ?>" class="social_media_link" onkeyup="data_social_media_key_up(this)" placeholder="Link social media" title="<?php echo  $social_media_id_sha1->tableList_info[$a]; ?>" id="<?php echo "link_" . $social_media_id_sha1->tableList_info[$a]; ?>">
-                  
-                  
-                  
-                  <img width="40" id="<?php echo $social_media_id_sha1->tableList_info[$a]; ?>" height="40" src="<?php echo $social_media_src_ ?>" title="data_social_media" alt="picture" class="cursor_pointer data_social_media_img" onclick="add_picture(this)" />
-
+                  <img src="<?php echo $social_media_src_ ?>" alt="" srcset="" class="social_media">
 
 
                <?php     
