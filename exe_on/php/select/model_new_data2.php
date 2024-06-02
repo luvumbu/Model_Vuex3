@@ -17,6 +17,7 @@ $liste_projet_visibility_ ->getDataFromTable($info_sql, "liste_projet_visibility
 $liste_projet_admin_id_sha1_user___ = $liste_projet_admin_id_sha1_user_->tableList_info[0]  ; 
 
 
+
  
 
 
