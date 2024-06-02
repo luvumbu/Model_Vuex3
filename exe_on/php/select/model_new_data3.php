@@ -50,6 +50,7 @@ for ($a = 0; $a < count($liste_projet_admin_id_sha1_->tableList_info); $a++) {
             <?php 
 if($liste_projet_admin_insert_bool=="1"){
 ?>
+
  <input type="text" title="<?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" id="<?php echo 'liste_projet_admin_name1_' . $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" onkeyup="liste_projet_admin_key_up(this)" value="<?php echo $_liste_projet_admin_name1 ?>">
 
 <?php

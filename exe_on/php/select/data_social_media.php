@@ -74,17 +74,59 @@ var_dump($social_media_id->tableList_info ) ;
 
                   $social_media_src_  = "https://img.icons8.com/office/40/picture.png";
             } else {
-                  $social_media_src_ = str_replace("../", "", $social_media_src->tableList_info[$a]);
+
+                  if(give_url()=="index.php"){
+
+                              $social_media_src_ = str_replace("../", "", $social_media_src->tableList_info[$a]);
+                  }
+                  else {
+                        $social_media_src_ = $social_media_src->tableList_info[$a] ; 
+                  }
+                  
             }
 
             if ($social_media_id_bool) {
-      ?>
 
+
+                  if(give_url()=="index.php"){
+
+ ?>
                   <input type="text" value="<?php echo $social_media_name->tableList_info[$a]; ?>" class="social_media_name" onkeyup="data_social_media_key_up(this)" placeholder="Name social media" title="<?php echo  $social_media_id_sha1->tableList_info[$a]; ?>" id="<?php echo "name_" . $social_media_id_sha1->tableList_info[$a]; ?>">
                   <input type="text" value="<?php echo $social_media_link->tableList_info[$a]; ?>" class="social_media_link" onkeyup="data_social_media_key_up(this)" placeholder="Link social media" title="<?php echo  $social_media_id_sha1->tableList_info[$a]; ?>" id="<?php echo "link_" . $social_media_id_sha1->tableList_info[$a]; ?>">
 
 
-                  <?php
+               <?php     
+               
+            
+            
+            }
+            else {
+?>
+
+<div class="display_flex_social_media">
+                       <h4>
+                               <a href="<?php echo $social_media_link->tableList_info[$a]; ?>">
+                              
+                              <?php echo $social_media_name->tableList_info[$a]; ?>
+                        
+                        </a>
+
+                       </h4>
+                       
+                       <a href="<?php echo $social_media_link->tableList_info[$a]; ?>">
+                        
+                              <img src="<?php echo $social_media_src_ ?>" alt="" srcset="" class="social_media">
+                              </a>
+                       
+                  </div>
+
+ 
+<?php 
+            }
+     
+
+
+             
 
 
 
@@ -92,7 +134,6 @@ var_dump($social_media_id->tableList_info ) ;
 
 
                   ?>
-                  <img width="40" id="<?php echo $social_media_id_sha1->tableList_info[$a]; ?>" height="40" src="<?php echo $social_media_src_ ?>" title="data_social_media" alt="picture" class="cursor_pointer data_social_media_img" onclick="add_picture(this)" />
 
             <?php
 

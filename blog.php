@@ -68,9 +68,9 @@ else {
 
 
   
-  if(!isset($_SESSION["information_user_id_sha1"])){     
+   
        require_once 'exe_on/php/select/presentation2.php' ; 
-  }
+ 
 
  
 
