@@ -1,7 +1,7 @@
 <style>
   :root {
-    --color_1: black;
-    --black:black; 
+    --color_1: #5d5082;
+    --black:#5d5082; 
     /*--color_1: #1877f2;*/
     --white: #ffffff;
   }

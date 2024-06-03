@@ -40,15 +40,12 @@ $bool__ =false ;
         // Utilisation de substr pour obtenir les 5 premiers caractères
        $liste_projet_admin_name1__= substr($liste_projet_admin_name1__, 0, $max_length);         
 
-       if(give_url()!="index.php"){
-        $liste_projet_admin_img_path________ = $liste_projet_admin_img_path_->tableList_info[$a];
-
-
-       }
-       else{
+     
        $liste_projet_admin_img_path________ = str_replace("../","",$liste_projet_admin_img_path_->tableList_info[$a]);
 
-       }
+     
+
+
      
         ?>
       <div class="fakeimg cursor_pointer data_all_colors" id="data_all_colors" >

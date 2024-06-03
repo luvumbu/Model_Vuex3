@@ -111,9 +111,20 @@ if($liste_projet_admin_insert_bool =="1"){
 ?>
           <img width="50" onclick="remove_block(this)" title="<?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>" class="remove_block cursor_pointer" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1" />
 
+<!--
+          <select class="form-select" aria-label="Default select example">
+  <option selected>Style menu</option>
+  <option value="1">css 1</option>
+  <option value="2">css 2 </option>
+  <option value="3">css 3</option>
+</select>
 
+<img width="50" height="50" src="https://img.icons8.com/officel/50/text-color.png" alt="text-color"/>
+<img width="50" height="50" src="https://img.icons8.com/ios/50/align-left.png" alt="align-left"/>
+<img width="50" height="50" src="https://img.icons8.com/ios/50/align-cell-content-center.png" alt="align-cell-content-center"/>
 
-
+<img width="50" height="50" src="https://img.icons8.com/ios/50/align-right.png" alt="align-right"/>
+-->
 <?php
 if($liste_projet_visibility_->tableList_info[$a]==""){
 
@@ -141,6 +152,7 @@ if($plus_element__t==0){
       ?>
 
 <img class="plus_element cursor_pointer" title="<?php echo $liste_projet_admin_id_sha1 ?>" onclick="data_parent_plus(this)" width="50" height="50" src="https://img.icons8.com/color/50/add--v1.png" alt="add--v1" />
+
 <?php 
     }
        
@@ -150,3 +162,9 @@ if($plus_element__t==0){
 }
 
 ?>
+
+<style>
+    .form-select{
+        width: 100%;
+    }
+</style>

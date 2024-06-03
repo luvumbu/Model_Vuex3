@@ -38,10 +38,7 @@ exe_on/php/select/log_data:
         if($_SESSION['liste_projet_admin_insert']== $_SESSION["information_user_id_sha1"]){
          
         }
-       
-        $liste_projet_admin_id_sha1 = $_SESSION["liste_projet_admin_insert"];
-       
-
+         $liste_projet_admin_id_sha1 = $_SESSION["liste_projet_admin_insert"];
 
       
       } else {

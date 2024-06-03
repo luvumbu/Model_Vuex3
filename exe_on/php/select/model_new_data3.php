@@ -36,32 +36,5 @@ else {
 
     }
  
-    //  require_once 'model_new_for_data3.php' ;
-/*
-    if(isset($_SESSION["information_user_id_sha1"])){
-
-        
-        if( $_SESSION["information_user_id_sha1"]==$liste_projet_admin_id_sha1_user_->tableList_info[$a]){
-           
-        }
-           
-    }
-    else {
-       if($liste_projet_visibility_->tableList_info[$a]==""){
-
-
-               
-       }
-       require_once 'model_new_for_data3.php' ;
-    }
-
-     
-
-
-  
-; 
-
- 
-*/
 }
 ?>
