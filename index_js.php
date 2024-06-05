@@ -135,6 +135,14 @@ function xw() {
   console.log(ok.info()); // demande l'information dans le tableau
   ok.push(); // envoie l'information au code pkp 
 
+
+
+
+
+
+
+  
+
   const myTimeout = setTimeout(xxx, 250);
 
 function xxx() {

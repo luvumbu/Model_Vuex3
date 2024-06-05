@@ -142,8 +142,13 @@ else {
       }
       
 
+
+     
+
  ?>
 </div>
+
+ 
 <style>
   .img_colors{ 
     background-color: white;
@@ -171,3 +176,5 @@ else {
     height: 50px;
   }
 </style>
+
+ 

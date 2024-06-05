@@ -103,5 +103,41 @@ else {
 
         
 
+
+
+
+<?php 
+
+
+ 
+
+for($a = 0 ; $a < count($liste_projet_admin_id_sha1_->tableList_info); $a ++) {
+
+
+ $redirection = $_SERVER['SERVER_NAME']."/qr_redirection.php/".$liste_projet_admin_id_sha1_->tableList_info[$a] ; 
+ 
+
+
+
+?>
+        <script>
+          var ok = new Information("qr_code_1/index.php"); // création de la classe 
+ok.add("data", "<?php echo   $redirection ?>"); // ajout de l'information pour lenvoi 
+ok.add("name", <?php echo $liste_projet_admin_id_sha1_->tableList_info[$a] ?>); // ajout de l'information pour lenvoi 
+
+ 
+//console.log(ok.info()); // demande l'information dans le tableau
+ok.push(); // envoie l'information au code pkp 
+        </script>
+<?php 
+}
+
+ 
+?>
+
+
+<?php
+echo   $_SERVER['SERVER_NAME'] ; 
+?>
 </body>
 </html>

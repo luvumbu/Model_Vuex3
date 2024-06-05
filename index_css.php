@@ -47,7 +47,7 @@ input{
 
 .information_user_reg_date_2{
   font-weight: bold;
-  text-shadow:  1px 1px black;
+  
 }
  
 </style>
@@ -149,3 +149,5 @@ input{
           width: 100%;
         }
     </style>
+
+ 
