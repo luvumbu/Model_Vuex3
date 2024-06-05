@@ -161,10 +161,20 @@ if($plus_element__t==0){
     <?php 
 }
 
+    $qr_src =  "src/img/qrcode_src/".$_liste_projet_admin_id_sha1_.".png" ; 
+//$_liste_projet_admin_id_sha1_ 
 ?>
+
+<div id="qr_code_img">
+<img src="<?php echo $qr_src ?>" alt="" srcset="">
+</div>
 
 <style>
     .form-select{
         width: 100%;
+    }
+    #qr_code_img {
+   
+        text-align: center;
     }
 </style>
