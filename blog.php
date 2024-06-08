@@ -69,7 +69,7 @@ else {
 
 
    
-       require_once 'exe_on/php/select/presentation2.php' ; 
+       require_once 'exe_on/php/select/presentation.php' ; 
  
 
  
