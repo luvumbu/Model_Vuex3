@@ -71,8 +71,13 @@ $info_sql = 'SELECT * FROM `information_user` WHERE   `information_user_id_sha1`
   $information_user_id_sha1_ ->getDataFromTable($info_sql, "information_user_id_sha1");
   $information_user_name_1_ ->getDataFromTable($info_sql, "information_user_name_1");
   $information_user_name_2_ ->getDataFromTable($info_sql, "information_user_name_2");
-  $information_user_img_path_ ->getDataFromTable($info_sql, "information_user_img_path");
-  
+ 
+
+  // source  1 
+ //$information_user_img_path_ ->getDataFromTable($info_sql, "information_user_img_path");
+
+  // source 2 
+    $information_user_img_path_ ->getDataFromTable($info_sql, "information_user_img_path_");
 
 
   $information_user_id_sha1____ =$information_user_id_sha1_->tableList_info[0] ; 

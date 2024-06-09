@@ -67,9 +67,9 @@ else {
   require_once 'exe_on/php/select/log_css.php' ; 
 
 
-
+  
    
-       require_once 'exe_on/php/select/presentation.php' ; 
+       require_once 'exe_on/php/select/presentation2.php' ; 
  
 
  

@@ -1,6 +1,9 @@
 <?php
 session_start() ; 
 
+ 
+
+
 if(isset($_SESSION["information_user_id_sha1"])){
       echo $_SESSION["information_user_id_sha1"] ; 
 }

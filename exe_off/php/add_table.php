@@ -21,9 +21,13 @@ $databaseHandler->set_column_names("information_user_adresse_3");
 $databaseHandler->set_column_names("information_user_adresse_4");
 $databaseHandler->set_column_names("information_user_password");
 $databaseHandler->set_column_names("information_user_img_name");
+$databaseHandler->set_column_names("information_user_img_name_");
+
 
 $databaseHandler->set_column_names("information_user_img_extennsion");
 $databaseHandler->set_column_names("information_user_img_path");
+$databaseHandler->set_column_names("information_user_img_path_");
+
 
 $databaseHandler->set_column_names("information_user_born");
 
@@ -48,6 +52,10 @@ $databaseHandler->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY")
 
  
 $databaseHandler->set_column_types("TEXT NOT NULL");
+$databaseHandler->set_column_types("TEXT NOT NULL");
+
+$databaseHandler->set_column_types("TEXT NOT NULL");
+
 $databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TEXT NOT NULL"); 
 $databaseHandler->set_column_types("TEXT NOT NULL");
@@ -115,6 +123,8 @@ $databaseHandler2->set_column_names("liste_projet_admin_name5");
 $databaseHandler2->set_column_names("liste_projet_admin_img_name");
 $databaseHandler2->set_column_names("liste_projet_admin_img_extennsion");
 $databaseHandler2->set_column_names("liste_projet_admin_img_path");
+$databaseHandler2->set_column_names("liste_projet_admin_img_path_");
+
 
 
 
@@ -157,6 +167,8 @@ $databaseHandler2->set_column_names("information_user_reg_date");
 
 $databaseHandler2->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY");
 $databaseHandler2->set_column_types("TEXT  NOT NULL");
+$databaseHandler2->set_column_types("TEXT  NOT NULL");
+
 $databaseHandler2->set_column_types("TEXT  NOT NULL");
 $databaseHandler2->set_column_types("TEXT  NOT NULL");
 $databaseHandler2->set_column_types("TEXT  NOT NULL");
@@ -239,12 +251,23 @@ $databaseHandler->set_column_names("social_media_id_user_sha1");
 
 $databaseHandler->set_column_names("social_media_name");
 $databaseHandler->set_column_names("social_media_link");
-$databaseHandler->set_column_names("social_media_src");
+ 
+$databaseHandler->set_column_names("social_media_img_path");
+$databaseHandler->set_column_names("social_media_img_path_");
+
+
+ 
+ 
+
 $databaseHandler->set_column_names("social_date");
 
 $databaseHandler->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY"); 
 $databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TEXT NOT NULL");
+$databaseHandler->set_column_types("TEXT NOT NULL");
+
+ 
+
 
 $databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TEXT NOT NULL");

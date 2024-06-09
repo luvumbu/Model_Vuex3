@@ -1,7 +1,7 @@
 <style>
   :root {
-    --color_1: #5d5082;
-    --black:#5d5082; 
+    --color_1: black;
+    --black:black; 
     /*--color_1: #1877f2;*/
     --white: #ffffff;
   }
@@ -33,7 +33,7 @@
     position: relative;
     border-radius: 5px;
     background-color: white;
-   
+    box-shadow: 1px 4px 4px 3px rgba(0, 0, 0, 0.2);
   }
 
   .index_class_3 input {

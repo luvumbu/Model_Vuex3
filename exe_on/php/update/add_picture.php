@@ -53,7 +53,7 @@ $_SESSION["id"] = $_POST["id"] ;
 
 switch ($_SESSION["id"]) {
    case "data_user":
-      $databaseHandler01->action_sql('UPDATE  `information_user` SET `information_user_img_name` = "'.$time.'",`information_user_img_extennsion` = "'.$total.'",`information_user_img_path` = "'.$file_path.'" ,`information_user_img_name_`="'.$_SESSION["file_path_2"].'" WHERE  `information_user_id_sha1` = "'.$information_user_id_sha1.'"') ; 
+      $databaseHandler01->action_sql('UPDATE  `information_user` SET `information_user_img_name` = "'.$time.'",`information_user_img_extennsion` = "'.$total.'",`information_user_img_path` = "'.$file_path.'" ,`information_user_img_path_`="'.$rename_.'" WHERE  `information_user_id_sha1` = "'.$information_user_id_sha1.'"') ; 
 //$time
      break;
    case "data_children":
@@ -61,7 +61,7 @@ switch ($_SESSION["id"]) {
       $liste_projet_admin_id_sha1 = $_SESSION["liste_projet_admin_id_sha1"] ;
       $file_path= $_SESSION["file_path"]  ; 
       $total= $_SESSION["total"] ;  
-      $databaseHandler01->action_sql('UPDATE  `liste_projet_admin` SET `liste_projet_admin_img_name` = "'.$liste_projet_admin_id_sha1.'",`liste_projet_admin_img_extennsion` = "'.$_SESSION["file_path_2"].'",`liste_projet_admin_img_path` = "'.$file_path.'" ,`liste_projet_admin_img_path_` = "'.$file_path.'"  WHERE  `liste_projet_admin_id_sha1` = "'.$liste_projet_admin_id_sha1.'"') ; 
+      $databaseHandler01->action_sql('UPDATE  `liste_projet_admin` SET `liste_projet_admin_img_name` = "'.$liste_projet_admin_id_sha1.'",`liste_projet_admin_img_extennsion` = "'.$_SESSION["file_path_2"].'",`liste_projet_admin_img_path` = "'.$file_path.'" ,`liste_projet_admin_img_path_` = "'.$rename_.'"  WHERE  `liste_projet_admin_id_sha1` = "'.$liste_projet_admin_id_sha1.'"') ; 
    
 
       // $liste_projet_admin_id_sha1
@@ -73,7 +73,7 @@ switch ($_SESSION["id"]) {
   $liste_projet_admin_id_sha1 = $_SESSION["liste_projet_admin_id_sha1"] ;
   $file_path= $_SESSION["file_path"]  ; 
   $total= $_SESSION["total"] ;  
-  $databaseHandler01->action_sql('UPDATE  `social_media` SET `social_media_src` = "'.$file_path.'",`social_media_src_` = "'.$_SESSION["file_path_2"].'"   WHERE  `social_media_id_sha1` = "'.$liste_projet_admin_id_sha1.'"') ; 
+  $databaseHandler01->action_sql('UPDATE  `social_media` SET `social_media_img_path` = "'.$file_path.'",`social_media_img_path_` = "'.$rename_.'"   WHERE  `social_media_id_sha1` = "'.$liste_projet_admin_id_sha1.'"') ; 
 
 break;
 
@@ -156,17 +156,24 @@ function redimensionnerImage($source, $destination, $nouvelleLargeur, $nouvelleH
 }
 
 // Chemin de l'image source
-//$path_ = "../../../src/img/".$_SESSION["information_user_id_sha1"]."/";
-$file_path ="../../".$file_path;
-$imageSource = $file_path;
+
+
+
+//$rename_
+$imageSource =  "../../".$file_path;
+ 
+echo "<br/>" ; 
+echo "<br/>" ; 
+echo "<br/>" ; 
+echo "<br/>" ; 
+echo "<br/>" ; 
 
 // Chemin de l'image de destination
-//$imageDestination = $_SESSION["file_path_2"];
-$imageDestination = "../../".$_SESSION["file_path_2"];
+$imageDestination = "../../".$rename_;
 
 // Nouvelle largeur et nouvelle hauteur souhaitées
-$nouvelleLargeur = 350;  // Par exemple, 800 pixels de largeur
-$nouvelleHauteur = 250;  // Par exemple, 600 pixels de hauteur
+$nouvelleLargeur = 800/2;  // Par exemple, 800 pixels de largeur
+$nouvelleHauteur = 600/2;  // Par exemple, 600 pixels de hauteur
 
 // Appeler la fonction pour redimensionner l'image
 if (redimensionnerImage($imageSource, $imageDestination, $nouvelleLargeur, $nouvelleHauteur)) {
@@ -177,11 +184,19 @@ if (redimensionnerImage($imageSource, $imageDestination, $nouvelleLargeur, $nouv
 ?>
 
 
+
 <script>
  window.location.href = "../../../index.php";
 </script>
 
 
- <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWVhY2s0aGcwOHNpMzA0amZseWh4YjRsbTU4bWw3MW83MTVoempvdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2j3oROgKTZOa4/giphy.webp" alt="">
+ <img class="grand_img" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWVhY2s0aGcwOHNpMzA0amZseWh4YjRsbTU4bWw3MW83MTVoempvdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2j3oROgKTZOa4/giphy.webp" alt="">
+
+
+ <style>
+    .grand_img{
+        width: 100%;
+    }
+ </style>
 </body>
 </html>

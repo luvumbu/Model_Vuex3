@@ -62,11 +62,10 @@ else {
 
 
 $file_path =   '../src/img/'.$_SESSION["information_user_id_sha1"].'/'.$_SESSION["name"].$total;
-$file_path_ =   '../src/img/'.$_SESSION["information_user_id_sha1"].'/'.$_SESSION["name"].'_'.$total;
 
 
 $_SESSION["file_path"] =$file_path; 
-$_SESSION["file_path_2"] =$file_path_ ; 
+
 $_SESSION["total"] =$total;
  
 $file_data = decode_chunk($_POST['file_data']);
@@ -117,4 +116,9 @@ if (file_exists($filename)) {
 
 
 // ...
+
+
+
+$_SESSION["file_path_"] =$file_path =   '../src/img/'.$_SESSION["information_user_id_sha1"].'/'.$_SESSION["name"].'_'.$total;
+
 ?>

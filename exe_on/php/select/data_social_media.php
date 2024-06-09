@@ -40,8 +40,11 @@
       $social_data->getDataFromTable($info_sql, "social_data");
 
       $social_media_id_sha1->getDataFromTable($info_sql, "social_media_id_sha1");
+// source 1
+//      $social_media_src->getDataFromTable($info_sql, "social_media_img_path");
+    // source 2
+  $social_media_src->getDataFromTable($info_sql, "social_media_img_path_");
 
-      $social_media_src->getDataFromTable($info_sql, "social_media_src");
 
       $social_media_name->getDataFromTable($info_sql, "social_media_name");
       $social_media_link->getDataFromTable($info_sql, "social_media_link");
