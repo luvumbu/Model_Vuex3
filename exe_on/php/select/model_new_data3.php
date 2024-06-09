@@ -1,6 +1,8 @@
 <?php
-$img_background = "img_background_" ; 
+
 $img_background = "img_background_2" ; 
+$img_background = "img_background_" ; 
+
 
 
 if (class_exists('Get_anne')) {
