@@ -1,7 +1,4 @@
-<div class="card text-center max_height" id="data_popular">
-       
-
-     
+<div class="card text-center max_height" id="data_popular"> 
 
 <?php
  
@@ -31,15 +28,12 @@ $bool__ =false ;
       $liste_projet_admin_name2_->getDataFromTable($info_sql,"liste_projet_admin_name2");
       $liste_projet_admin_img_path_->getDataFromTable($info_sql,"liste_projet_admin_img_path");
       
-      $max_depas = false ; 
+
 
       for($a = 0 ; $a <count($liste_projet_admin_id_sha1_->tableList_info); $a ++) {
         $liste_projet_admin_id_sha1__=  $liste_projet_admin_id_sha1_->tableList_info[$a] ; 
         $liste_projet_admin_name1__=  $liste_projet_admin_name1_->tableList_info[$a] ;   
-        $max_length = 40;        
-
-
-       
+        $max_length = 50;        
         // Utilisation de substr pour obtenir les 5 premiers caractères
        $liste_projet_admin_name1__= substr($liste_projet_admin_name1__, 0, $max_length);         
 
@@ -61,11 +55,18 @@ $bool__ =false ;
           ?>
         </div>
         <div>
-          <?php 
+          <?php  
           
-           
-            echo  mot_de_ascii( $liste_projet_admin_name1__  ) ; 
+          
+          if($liste_projet_admin_name1__==""){
 
+          }
+          else {
+           echo  $liste_projet_admin_name1__ =  mot_de_ascii($liste_projet_admin_name1__);
+          }
+        
+       
+     
           
           
           ?>
