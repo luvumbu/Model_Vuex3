@@ -34,6 +34,7 @@ $reload_page          ='<meta http-equiv="refresh" content="0;URL=">';
 require_once $path_DatabaseHandler; 
 require_once $give_url; 
 
+require 'class/ascii_de_mot.php';
 
 if (file_exists($fichier_connexion)) {
 require_once $fichier_connexion;   
@@ -71,7 +72,6 @@ else {
    
   
  
-  
 
   require_once 'index_js.php' ; 
   require_once 'index_css.php' ; 
