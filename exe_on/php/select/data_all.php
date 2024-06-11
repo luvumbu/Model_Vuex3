@@ -31,12 +31,15 @@ $bool__ =false ;
       $liste_projet_admin_name2_->getDataFromTable($info_sql,"liste_projet_admin_name2");
       $liste_projet_admin_img_path_->getDataFromTable($info_sql,"liste_projet_admin_img_path");
       
-
+      $max_depas = false ; 
 
       for($a = 0 ; $a <count($liste_projet_admin_id_sha1_->tableList_info); $a ++) {
         $liste_projet_admin_id_sha1__=  $liste_projet_admin_id_sha1_->tableList_info[$a] ; 
         $liste_projet_admin_name1__=  $liste_projet_admin_name1_->tableList_info[$a] ;   
-        $max_length = 10;        
+        $max_length = 40;        
+
+
+       
         // Utilisation de substr pour obtenir les 5 premiers caractères
        $liste_projet_admin_name1__= substr($liste_projet_admin_name1__, 0, $max_length);         
 
@@ -58,7 +61,14 @@ $bool__ =false ;
           ?>
         </div>
         <div>
-          <?php  echo $liste_projet_admin_name1__.'...' ?>
+          <?php 
+          
+           
+            echo  mot_de_ascii( $liste_projet_admin_name1__  ) ; 
+
+          
+          
+          ?>
         </div>   
 
         <br/>
