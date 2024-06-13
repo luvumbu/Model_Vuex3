@@ -64,7 +64,7 @@ input{
     .plus_element{
         margin-top: 100px;
     }
-        .img_background_ {
+        .img_backgrounda {
             margin-top: 50px; 
             margin-bottom: 50px; 
             max-width: 100%;
@@ -79,11 +79,11 @@ input{
 
         }
 
-        .img_background_ img:hover {
+        .img_backgrounda img:hover {
             cursor: pointer;
         }
 
-        .img_background_ img {
+        .img_backgrounda img {
             max-height: 100%; /* Limite la hauteur de l'image à la hauteur de la div */
             width: auto; /* Maintient le ratio d'aspect de l'image */
             display: block; /* Évite les espaces indésirables sous l'image */
@@ -93,7 +93,7 @@ input{
             margin-top: 50px;
             margin-bottom: 50px;
         }
-        .img_background_:hover{
+        .img_backgrounda:hover{
           cursor: pointer;
         }
 
@@ -101,11 +101,11 @@ input{
 
      
 
-        .img_background_2 img:hover {
+        .img_backgroundb img:hover {
             cursor: pointer;
         }
 
-        .img_background_2 img {
+        .img_backgroundb img {
             max-height: 100%; /* Limite la hauteur de l'image à la hauteur de la div */
             width: auto; /* Maintient le ratio d'aspect de l'image */
             display: block; /* Évite les espaces indésirables sous l'image */
@@ -113,11 +113,11 @@ input{
             position: relative;
             background-color: black; 
         }
-        .img_background_2:hover{
+        .img_backgroundb:hover{
           cursor: pointer;
         }
 
-        .img_background_2{
+        .img_backgroundb{
            max-width: 50%;
            min-height: 50%;
            text-align: center;
@@ -126,7 +126,7 @@ input{
             background-color: rgba(0,0,0,0.4);
            margin: auto;
         }
-        .img_background_2 img{
+        .img_backgroundb img{
         width: 100%;
         text-align: center;
         }

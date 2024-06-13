@@ -63,7 +63,11 @@ switch ($_SESSION["id"]) {
    case "data_children":
  
       
-      $liste_projet_admin_id_sha1 = $_SESSION["information_user_id_sha1"] ;
+   
+     $liste_projet_admin_id_sha1 = $_SESSION["className"] ;
+
+
+      
       $file_path= $_SESSION["file_path"]  ; 
       $total= $_SESSION["total"] ;  
 

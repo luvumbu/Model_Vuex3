@@ -89,8 +89,18 @@ function liste_projet_admin_key_up(_this){
   var ok = new Information("exe_on/php/info/add_picture.php"); // création de la classe 
   ok.add("liste_projet_admin_id_sha1", _this.id); // ajout de l'information pour lenvoi 
   ok.add("id", _this.title); // ajout de l'information pour lenvoi 
+var className_ = _this.className.replace("img_backgrounda", "") ; 
+
+var className_ = className_.replace("img_backgroundb", "") ; 
 
 
+  ok.add("className",className_); // ajout de l'information pour lenvoi 
+
+
+  
+  
+
+ 
   console.log(ok.info()); // demande l'information dans le tableau
   ok.push(); // envoie l'information au code pkp 
  window.location.href = "add_picture/index.php";
@@ -228,11 +238,11 @@ function myGreeting() {
 
   
 
-  if(_this.className=="img_background_"){
-    _this.className="img_background_2" ; 
+  if(_this.className=="img_backgrounda"){
+    _this.className="img_backgroundb" ; 
   }
   else {
-    _this.className="img_background_" ; 
+    _this.className="img_backgrounda" ; 
   }
  }
 

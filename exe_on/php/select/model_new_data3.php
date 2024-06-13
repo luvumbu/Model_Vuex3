@@ -1,7 +1,7 @@
 <?php
+$img_background = "img_backgrounda" ; 
+$img_background = "img_backgroundb" ; 
 
-$img_background = "img_background_2" ; 
-$img_background = "img_background_" ; 
 
 
 
@@ -97,7 +97,7 @@ else {
 }
     ?>
  
-<div class="<?php echo $img_background ?>" id="<?php echo $_liste_projet_admin_id_sha1_ ?>" onclick="<?php echo  $onclick ?>" title="data_children">
+<div class="<?php echo  $liste_projet_admin_id_sha1_->tableList_info[$a]." ".$img_background ?>" id="<?php echo $_liste_projet_admin_id_sha1_ ?>" onclick="<?php echo  $onclick ?>" title="data_children">
                 <img src="<?php echo  $img_src ?>" alt="" srcset="">
 </div>
 <div class="information_user_reg_date_">
